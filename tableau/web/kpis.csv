@@ -1,0 +1,8 @@
+kpi_order,kpi_label,kpi_value,kpi_display,kpi_note
+1,Best WAPE at Total,0.025610,2.6%,"SARIMA(1,1,1)(0,1,0)[52], the lowest-WAPE model at Total on the final test window. WAPE is the sum of absolute errors divided by the sum of actual revenue, 4-week horizon."
+2,Error cut vs seasonal naive at Total,0.817610,81.8%,"Relative WAPE reduction of SARIMA(1,1,1)(0,1,0)[52] versus seasonal naive (14.0%) at Total."
+3,Levels won by the best Total model,1.000000,1 of 9,"Levels where SARIMA(1,1,1)(0,1,0)[52] has the lowest WAPE. R fable ARIMA MinT shrink wins 8 of 9."
+4,Stores where the best store model beats seasonal naive,1.000000,10 of 10,"Stores where R fable ARIMA MinT shrink (best at Store level) has lower WAPE than seasonal naive, computed per store over horizons 1 to 4 and 6 test origins."
+5,"80% interval coverage, best interval model at Total",0.833330,83.3%,"ETS (statsforecast AutoETS) comes closest to the 80% target at Total. Based on only 24 forecasts, so it is noisy; it is the best case, not the typical one."
+6,MinT shrink WAPE ratio vs ARIMA base at Total,0.874550,0.875,WAPE of fable ARIMA with MinT shrink divided by the unreconciled fable ARIMA at Total. Below 1.00 means reconciliation helped.
+7,Test origins,6.000000,6 origins,Final held-out window: 6 rolling origins of 4 weeks each (24 forecast weeks). Rankings among close models are tentative.

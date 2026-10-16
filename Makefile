@@ -27,7 +27,7 @@ evaluate:         ## one metric code path over every model; Python reconciliatio
 export:           ## Tableau CSVs in tableau/data/
 	$(HF) export
 
-tableau-web:      ## 5 flattened CSVs for Tableau Public web authoring in tableau/web/ (from tableau/data/)
+tableau-web:      ## 7 flattened CSVs for Tableau Public web authoring in tableau/web/ (from tableau/data/)
 	$(PY) scripts/build_tableau_web.py
 
 figures:

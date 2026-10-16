@@ -242,7 +242,7 @@ Determinism: DuckDB single thread, fixed seeds, explicit orderings; two complete
 ## Repository layout
 
 `sql/` numbered DuckDB scripts, `src/hier_forecast/` package, `R/forecast_reconciliation.R`, `reports/forecast_report.qmd` (+ rendered HTML), `tableau/data/` extracts and
-`tableau/DASHBOARD_SPEC.md`, `tableau/web/` (5 flattened CSVs for Tableau Public web authoring, `make tableau-web`), `docs/` (data dictionary, memo, figures), `tests/` (fixture, data contracts, leakage, metrics, reconciliation, exports, determinism).
+`tableau/DASHBOARD_SPEC.md`, `tableau/web/` (7 flattened CSVs for Tableau Public web authoring, `make tableau-web`), `docs/` (data dictionary, memo, figures), `tests/` (fixture, data contracts, leakage, metrics, reconciliation, exports, determinism).
 
 ## Tableau extracts
 
