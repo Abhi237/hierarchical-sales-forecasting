@@ -84,7 +84,7 @@ def run_exports(cfg: dict) -> list[dict]:
     out = []
 
     # 1. hierarchy nodes ---------------------------------------------------------------------------------------------------
-    tot = hier.Y.sum()
+    tot = hier.Y[:, list(hier.node_ids).index("T")].sum()   # revenue share is relative to the Total node (level 1)
     rev = {n: hier.Y[:, i].sum() for i, n in enumerate(hier.node_ids)}
     nodes["layer"] = "hierarchy (levels 1-9)"
     nodes["total_revenue_usd"] = nodes["node_id"].map(rev)

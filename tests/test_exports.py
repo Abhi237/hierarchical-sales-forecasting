@@ -72,9 +72,9 @@ def test_hierarchy_nodes_cover_all_levels(built):
     assert set(h["level_id"]) == {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12}
     assert h["node_id"].is_unique
     top = h[h["level_id"] == 1]
-    assert top["share_of_total_revenue_pct"].iloc[0] == pytest.approx(100.0)
+    assert top["share_of_total_revenue_pct"].iloc[0] == pytest.approx(100.0, abs=1e-3)
     for lvl in range(2, 10):
-        assert h[h["level_id"] == lvl]["share_of_total_revenue_pct"].sum() == pytest.approx(100.0, abs=1e-6)
+        assert h[h["level_id"] == lvl]["share_of_total_revenue_pct"].sum() == pytest.approx(100.0, abs=1e-3)   # CSV values are rounded to 4 decimals
 
 
 def test_actuals_weekly_children_sum_to_total(built):
@@ -105,7 +105,11 @@ def test_decision_costs_are_nonnegative_and_buffer_positive(built):
 def test_scorecard_is_tidy_long_format(built):
     s = read(built, "metric_scorecard.csv")
     assert not s.duplicated(["layer", "model", "level_id", "split", "metric"]).any()
-    assert s["value"].notna().mean() > 0.8
+    # only the point-only reconciled Python forecasts (py_*) may lack interval-based metrics; every other value must exist
+    interval_metrics = {"Coverage_80", "Coverage_95", "Pinball_scaled", "Width_80_rel", "Width_95_rel"}
+    missing = s[s["value"].isna()]
+    assert set(missing["metric"]) <= interval_metrics
+    assert missing["model"].str.startswith("py_").all()
 
 
 def test_interval_coverage_miscalibration_definition(built):
