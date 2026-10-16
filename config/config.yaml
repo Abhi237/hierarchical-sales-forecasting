@@ -1,0 +1,56 @@
+# Single source of configuration. Tests override pieces of this for the small fixture.
+project: hierarchical-sales-forecasting
+seed: 20261016
+
+data:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  db_path: data/processed/m5.duckdb
+  calendar_csv: calendar.csv
+  sales_csv: sales_train_evaluation.csv
+  prices_csv: sell_prices.csv
+  n_days: 1941                 # sales_train_evaluation.csv has d_1 .. d_1941 (2011-01-29 .. 2016-05-22)
+  expected:                    # shape checks applied by scripts/download_data.py and the SQL contract tests
+    sales_rows: 30490
+    calendar_rows: 1969
+    price_rows: 6841121
+
+duckdb:
+  threads: 1                   # single thread so every aggregation order is fixed (deterministic reruns)
+  memory_limit: 6GB
+
+scope:
+  recent_daily_weeks: 12       # daily view for the last N complete weeks (levels 1-3)
+  item_layer:
+    top_items: 300             # level 10 sample: top items by revenue in the selection window (all 10 stores summed)
+    top_item_stores: 600       # level 12 sample: top item x store series by revenue in the selection window
+
+backtest:
+  horizon: 4                   # weeks (28 days), the M5 evaluation horizon
+  step: 4
+  season: 52                   # weekly data, annual seasonality
+  n_origins_burnin: 8          # origins used for training/conformal calibration only
+  n_origins_validation: 6      # model selection / tuning window
+  n_origins_test: 6            # final held-out window, defined up front, never used for any choice
+  levels_pi: [80, 95]
+  quantiles: [0.025, 0.1, 0.5, 0.9, 0.975]
+  ma_window: 4
+  bootstrap_reps: 1000
+  item_layer_models: [naive, snaive, ma4, ets, lgbm_q, lgbm_conformal]
+
+lgbm:
+  n_estimators: 250
+  learning_rate: 0.05
+  num_leaves: 31
+  min_child_samples: 40
+  subsample: 0.8
+  subsample_freq: 1
+  colsample_bytree: 0.8
+  reg_lambda: 1.0
+  n_jobs: 4
+  max_train_weeks: 156         # training pairs from the last 3 years before each origin
+
+decision:                       # ASSUMED parameters for the planning table (not estimated from data)
+  assumed_gross_margin: 0.25   # ASSUMED lost margin per revenue dollar of unmet demand
+  assumed_carrying_cost: 0.05  # ASSUMED holding / markdown cost per revenue dollar of excess plan over a 4-week horizon
+  plan_quantile: 0.9           # ASSUMED planning service level

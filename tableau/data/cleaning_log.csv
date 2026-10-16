@@ -1,0 +1,25 @@
+step,metric,value,note
+1,item_store_series,30490.0000,rows in dim_series (item x store)
+2,day_columns_loaded,1941.0000,d_1 .. d_n of the sales file
+3,item_store_day_cells,59181090.0000,series x days (long format)
+4,null_or_negative_units,0.0000,must be 0
+5,zero_unit_cells,40241819.0000,kept as true zeros (demand or stockout cannot be separated)
+6,leading_zero_cells,12384870.0000,"zero cells before an item-store first sale (not yet on sale); kept, revenue 0"
+7,series_with_no_sales_ever,0.0000,item-store series with all zeros
+8,calendar_days_in_scope,1941.0000,calendar rows with d_num <= n_days
+9,complete_weeks_modelled,277.0000,weeks with all 7 days in scope
+10,days_dropped_partial_week,2.0000,"trailing days of an incomplete week, excluded from weekly series"
+11,item_store_weeks,8445730.0000,rows in fact_item_store_week
+12,item_store_weeks_price_missing,1757059.0000,weeks without a listed price (not on sale); revenue = 0
+13,price_missing_but_units_positive,0.0000,units sold with no price: revenue would be unknown (must be 0)
+14,price_listed_zero_unit_weeks,1598875.0000,"listed but no sales (true zero demand or stockout), kept as zero revenue"
+15,stockout_proxy_runs,86453.0000,runs of >= 4 consecutive zero weeks with a listed price after first sale
+16,stockout_proxy_weeks,1038312.0000,weeks inside those runs
+17,store_days_all_zero,24.0000,"store-days with zero units in every item (store closed, e.g. Christmas); kept as zero revenue"
+18,total_units,66821317.0000,"sum of all units, weekly fact"
+19,total_revenue_usd,191239853.0000,rounded to dollars
+20,bottom_series,70.0000,store x department bottom series
+21,hierarchy_nodes,154.0000,"aggregated nodes, levels 1-9"
+22,item_layer_nodes,900.0000,sampled item and item x store nodes (levels 10 and 12)
+23,item_layer_revenue_share_selection_window_pct_x100,2135.0000,top item x store series share of all item-store revenue in the selection window (percent x 100)
+24,item_sample_revenue_share_selection_window_pct_x100,4426.0000,top items share of revenue in the selection window (percent x 100)

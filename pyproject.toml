@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hierarchical-sales-forecasting"
+version = "1.0.0"
+description = "Hierarchical and probabilistic revenue forecasting on the M5 Walmart data (ETS, SARIMA, quantile LightGBM, forecast reconciliation)"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+license = { text = "MIT" }
+dependencies = [
+  "duckdb", "pandas", "pyarrow", "numpy", "scikit-learn", "matplotlib", "pyyaml", "click", "scipy",
+  "lightgbm", "statsforecast", "statsmodels",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+report = ["markdown", "weasyprint"]
+
+[project.scripts]
+hier-forecast = "hier_forecast.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 160
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "B", "UP"]
+ignore = ["B008", "B905"]
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/build_memo.py" = ["E501"]
+"scripts/build_readme.py" = ["E501"]
+"tests/*.py" = ["E501"]
+"src/hier_forecast/exports.py" = ["E501"]
+"src/hier_forecast/plots.py" = ["E501"]
+"src/hier_forecast/evaluate.py" = ["E501"]
+"src/hier_forecast/metrics.py" = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

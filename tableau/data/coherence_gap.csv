@@ -1,0 +1,172 @@
+model,model_label,level_id,level_name,mean_abs_rel_gap
+ets,ETS (statsforecast AutoETS),1,Total,0.013721
+ets,ETS (statsforecast AutoETS),2,State,0.012467
+ets,ETS (statsforecast AutoETS),3,Store,0.013842
+ets,ETS (statsforecast AutoETS),4,Category,0.014217
+ets,ETS (statsforecast AutoETS),5,Department,0.028454
+ets,ETS (statsforecast AutoETS),6,State x Category,0.022445
+ets,ETS (statsforecast AutoETS),7,State x Department,0.027111
+ets,ETS (statsforecast AutoETS),8,Store x Category,0.010500
+ets,ETS (statsforecast AutoETS),9,Store x Department,0.000000
+lgbm_q,LightGBM quantile,1,Total,0.011664
+lgbm_q,LightGBM quantile,2,State,0.012353
+lgbm_q,LightGBM quantile,3,Store,0.012101
+lgbm_q,LightGBM quantile,4,Category,0.009874
+lgbm_q,LightGBM quantile,5,Department,0.014537
+lgbm_q,LightGBM quantile,6,State x Category,0.010938
+lgbm_q,LightGBM quantile,7,State x Department,0.013459
+lgbm_q,LightGBM quantile,8,Store x Category,0.008709
+lgbm_q,LightGBM quantile,9,Store x Department,0.000000
+ma4,Moving average (4 wk),1,Total,0.000000
+ma4,Moving average (4 wk),2,State,0.000000
+ma4,Moving average (4 wk),3,Store,0.000000
+ma4,Moving average (4 wk),4,Category,0.000000
+ma4,Moving average (4 wk),5,Department,0.000000
+ma4,Moving average (4 wk),6,State x Category,0.000000
+ma4,Moving average (4 wk),7,State x Department,0.000000
+ma4,Moving average (4 wk),8,Store x Category,0.000000
+ma4,Moving average (4 wk),9,Store x Department,0.000000
+naive,Naive,1,Total,0.000000
+naive,Naive,2,State,0.000000
+naive,Naive,3,Store,0.000000
+naive,Naive,4,Category,0.000000
+naive,Naive,5,Department,0.000000
+naive,Naive,6,State x Category,0.000000
+naive,Naive,7,State x Department,0.000000
+naive,Naive,8,Store x Category,0.000000
+naive,Naive,9,Store x Department,0.000000
+r_arima_base,R fable ARIMA base,1,Total,0.018814
+r_arima_base,R fable ARIMA base,2,State,0.022332
+r_arima_base,R fable ARIMA base,3,Store,0.019830
+r_arima_base,R fable ARIMA base,4,Category,0.014083
+r_arima_base,R fable ARIMA base,5,Department,0.021011
+r_arima_base,R fable ARIMA base,6,State x Category,0.012212
+r_arima_base,R fable ARIMA base,7,State x Department,0.018623
+r_arima_base,R fable ARIMA base,8,Store x Category,0.009860
+r_arima_base,R fable ARIMA base,9,Store x Department,0.000000
+r_arima_bu,R fable ARIMA bottom-up,1,Total,0.000000
+r_arima_bu,R fable ARIMA bottom-up,2,State,0.000000
+r_arima_bu,R fable ARIMA bottom-up,3,Store,0.000000
+r_arima_bu,R fable ARIMA bottom-up,4,Category,0.000000
+r_arima_bu,R fable ARIMA bottom-up,5,Department,0.000000
+r_arima_bu,R fable ARIMA bottom-up,6,State x Category,0.000000
+r_arima_bu,R fable ARIMA bottom-up,7,State x Department,0.000000
+r_arima_bu,R fable ARIMA bottom-up,8,Store x Category,0.000000
+r_arima_bu,R fable ARIMA bottom-up,9,Store x Department,0.000000
+r_arima_mint,R fable ARIMA MinT shrink,1,Total,0.000000
+r_arima_mint,R fable ARIMA MinT shrink,2,State,0.000000
+r_arima_mint,R fable ARIMA MinT shrink,3,Store,0.000000
+r_arima_mint,R fable ARIMA MinT shrink,4,Category,0.000000
+r_arima_mint,R fable ARIMA MinT shrink,5,Department,0.000000
+r_arima_mint,R fable ARIMA MinT shrink,6,State x Category,0.000000
+r_arima_mint,R fable ARIMA MinT shrink,7,State x Department,0.000000
+r_arima_mint,R fable ARIMA MinT shrink,8,Store x Category,0.000000
+r_arima_mint,R fable ARIMA MinT shrink,9,Store x Department,0.000000
+r_arima_ols,R fable ARIMA OLS,1,Total,0.000000
+r_arima_ols,R fable ARIMA OLS,2,State,0.000000
+r_arima_ols,R fable ARIMA OLS,3,Store,0.000000
+r_arima_ols,R fable ARIMA OLS,4,Category,0.000000
+r_arima_ols,R fable ARIMA OLS,5,Department,0.000000
+r_arima_ols,R fable ARIMA OLS,6,State x Category,0.000000
+r_arima_ols,R fable ARIMA OLS,7,State x Department,0.000000
+r_arima_ols,R fable ARIMA OLS,8,Store x Category,0.000000
+r_arima_ols,R fable ARIMA OLS,9,Store x Department,0.000000
+r_arima_wls_struct,R fable ARIMA WLS struct,1,Total,0.000000
+r_arima_wls_struct,R fable ARIMA WLS struct,2,State,0.000000
+r_arima_wls_struct,R fable ARIMA WLS struct,3,Store,0.000000
+r_arima_wls_struct,R fable ARIMA WLS struct,4,Category,0.000000
+r_arima_wls_struct,R fable ARIMA WLS struct,5,Department,0.000000
+r_arima_wls_struct,R fable ARIMA WLS struct,6,State x Category,0.000000
+r_arima_wls_struct,R fable ARIMA WLS struct,7,State x Department,0.000000
+r_arima_wls_struct,R fable ARIMA WLS struct,8,Store x Category,0.000000
+r_arima_wls_struct,R fable ARIMA WLS struct,9,Store x Department,0.000000
+r_arima_wls_var,R fable ARIMA WLS var,1,Total,0.000000
+r_arima_wls_var,R fable ARIMA WLS var,2,State,0.000000
+r_arima_wls_var,R fable ARIMA WLS var,3,Store,0.000000
+r_arima_wls_var,R fable ARIMA WLS var,4,Category,0.000000
+r_arima_wls_var,R fable ARIMA WLS var,5,Department,0.000000
+r_arima_wls_var,R fable ARIMA WLS var,6,State x Category,0.000000
+r_arima_wls_var,R fable ARIMA WLS var,7,State x Department,0.000000
+r_arima_wls_var,R fable ARIMA WLS var,8,Store x Category,0.000000
+r_arima_wls_var,R fable ARIMA WLS var,9,Store x Department,0.000000
+r_ets_base,R fable ETS base,1,Total,0.004317
+r_ets_base,R fable ETS base,2,State,0.003596
+r_ets_base,R fable ETS base,3,Store,0.004578
+r_ets_base,R fable ETS base,4,Category,0.002473
+r_ets_base,R fable ETS base,5,Department,0.004933
+r_ets_base,R fable ETS base,6,State x Category,0.004034
+r_ets_base,R fable ETS base,7,State x Department,0.005161
+r_ets_base,R fable ETS base,8,Store x Category,0.003412
+r_ets_base,R fable ETS base,9,Store x Department,0.000000
+r_ets_bu,R fable ETS bottom-up,1,Total,0.000000
+r_ets_bu,R fable ETS bottom-up,2,State,0.000000
+r_ets_bu,R fable ETS bottom-up,3,Store,0.000000
+r_ets_bu,R fable ETS bottom-up,4,Category,0.000000
+r_ets_bu,R fable ETS bottom-up,5,Department,0.000000
+r_ets_bu,R fable ETS bottom-up,6,State x Category,0.000000
+r_ets_bu,R fable ETS bottom-up,7,State x Department,0.000000
+r_ets_bu,R fable ETS bottom-up,8,Store x Category,0.000000
+r_ets_bu,R fable ETS bottom-up,9,Store x Department,0.000000
+r_ets_mint,R fable ETS MinT shrink,1,Total,0.000000
+r_ets_mint,R fable ETS MinT shrink,2,State,0.000000
+r_ets_mint,R fable ETS MinT shrink,3,Store,0.000000
+r_ets_mint,R fable ETS MinT shrink,4,Category,0.000000
+r_ets_mint,R fable ETS MinT shrink,5,Department,0.000000
+r_ets_mint,R fable ETS MinT shrink,6,State x Category,0.000000
+r_ets_mint,R fable ETS MinT shrink,7,State x Department,0.000000
+r_ets_mint,R fable ETS MinT shrink,8,Store x Category,0.000000
+r_ets_mint,R fable ETS MinT shrink,9,Store x Department,0.000000
+r_ets_ols,R fable ETS OLS,1,Total,0.000000
+r_ets_ols,R fable ETS OLS,2,State,0.000000
+r_ets_ols,R fable ETS OLS,3,Store,0.000000
+r_ets_ols,R fable ETS OLS,4,Category,0.000000
+r_ets_ols,R fable ETS OLS,5,Department,0.000000
+r_ets_ols,R fable ETS OLS,6,State x Category,0.000000
+r_ets_ols,R fable ETS OLS,7,State x Department,0.000000
+r_ets_ols,R fable ETS OLS,8,Store x Category,0.000000
+r_ets_ols,R fable ETS OLS,9,Store x Department,0.000000
+r_ets_wls_struct,R fable ETS WLS struct,1,Total,0.000000
+r_ets_wls_struct,R fable ETS WLS struct,2,State,0.000000
+r_ets_wls_struct,R fable ETS WLS struct,3,Store,0.000000
+r_ets_wls_struct,R fable ETS WLS struct,4,Category,0.000000
+r_ets_wls_struct,R fable ETS WLS struct,5,Department,0.000000
+r_ets_wls_struct,R fable ETS WLS struct,6,State x Category,0.000000
+r_ets_wls_struct,R fable ETS WLS struct,7,State x Department,0.000000
+r_ets_wls_struct,R fable ETS WLS struct,8,Store x Category,0.000000
+r_ets_wls_struct,R fable ETS WLS struct,9,Store x Department,0.000000
+r_ets_wls_var,R fable ETS WLS var,1,Total,0.000000
+r_ets_wls_var,R fable ETS WLS var,2,State,0.000000
+r_ets_wls_var,R fable ETS WLS var,3,Store,0.000000
+r_ets_wls_var,R fable ETS WLS var,4,Category,0.000000
+r_ets_wls_var,R fable ETS WLS var,5,Department,0.000000
+r_ets_wls_var,R fable ETS WLS var,6,State x Category,0.000000
+r_ets_wls_var,R fable ETS WLS var,7,State x Department,0.000000
+r_ets_wls_var,R fable ETS WLS var,8,Store x Category,0.000000
+r_ets_wls_var,R fable ETS WLS var,9,Store x Department,0.000000
+sarima_111_010,"SARIMA(1,1,1)(0,1,0)[52]",1,Total,0.004548
+sarima_111_010,"SARIMA(1,1,1)(0,1,0)[52]",2,State,0.004861
+sarima_111_010,"SARIMA(1,1,1)(0,1,0)[52]",3,Store,0.005729
+sarima_111_010,"SARIMA(1,1,1)(0,1,0)[52]",4,Category,0.003991
+sarima_111_010,"SARIMA(1,1,1)(0,1,0)[52]",5,Department,0.007951
+sarima_111_010,"SARIMA(1,1,1)(0,1,0)[52]",6,State x Category,0.004757
+sarima_111_010,"SARIMA(1,1,1)(0,1,0)[52]",7,State x Department,0.007467
+sarima_111_010,"SARIMA(1,1,1)(0,1,0)[52]",8,Store x Category,0.004142
+sarima_111_010,"SARIMA(1,1,1)(0,1,0)[52]",9,Store x Department,0.000000
+sarima_airline,"SARIMA(0,1,1)(0,1,1)[52]",1,Total,0.006677
+sarima_airline,"SARIMA(0,1,1)(0,1,1)[52]",2,State,0.007881
+sarima_airline,"SARIMA(0,1,1)(0,1,1)[52]",3,Store,0.007179
+sarima_airline,"SARIMA(0,1,1)(0,1,1)[52]",4,Category,0.006045
+sarima_airline,"SARIMA(0,1,1)(0,1,1)[52]",5,Department,0.013037
+sarima_airline,"SARIMA(0,1,1)(0,1,1)[52]",6,State x Category,0.006465
+sarima_airline,"SARIMA(0,1,1)(0,1,1)[52]",7,State x Department,0.010238
+sarima_airline,"SARIMA(0,1,1)(0,1,1)[52]",8,Store x Category,0.004701
+sarima_airline,"SARIMA(0,1,1)(0,1,1)[52]",9,Store x Department,0.000000
+snaive,Seasonal naive (52 wk),1,Total,0.000000
+snaive,Seasonal naive (52 wk),2,State,0.000000
+snaive,Seasonal naive (52 wk),3,Store,0.000000
+snaive,Seasonal naive (52 wk),4,Category,0.000000
+snaive,Seasonal naive (52 wk),5,Department,0.000000
+snaive,Seasonal naive (52 wk),6,State x Category,0.000000
+snaive,Seasonal naive (52 wk),7,State x Department,0.000000
+snaive,Seasonal naive (52 wk),8,Store x Category,0.000000
+snaive,Seasonal naive (52 wk),9,Store x Department,0.000000

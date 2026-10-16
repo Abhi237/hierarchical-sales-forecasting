@@ -1,0 +1,278 @@
+week_idx,week_start,week_end,snap_days_ca,snap_days_tx,snap_days_wi,event_names,is_christmas_week,role
+1,2011-01-29,2011-02-04,4.0000,2.0000,2.0000,,0,train/backtest history
+2,2011-02-05,2011-02-11,6.0000,5.0000,5.0000,SuperBowl,0,train/backtest history
+3,2011-02-12,2011-02-18,0.0000,3.0000,3.0000,ValentinesDay,0,train/backtest history
+4,2011-02-19,2011-02-25,0.0000,0.0000,0.0000,PresidentsDay,0,train/backtest history
+5,2011-02-26,2011-03-04,4.0000,2.0000,2.0000,,0,train/backtest history
+6,2011-03-05,2011-03-11,6.0000,5.0000,5.0000,LentStart,0,train/backtest history
+7,2011-03-12,2011-03-18,0.0000,3.0000,3.0000,LentWeek2; StPatricksDay,0,train/backtest history
+8,2011-03-19,2011-03-25,0.0000,0.0000,0.0000,Purim End,0,train/backtest history
+9,2011-03-26,2011-04-01,1.0000,1.0000,0.0000,,0,train/backtest history
+10,2011-04-02,2011-04-08,7.0000,4.0000,5.0000,,0,train/backtest history
+11,2011-04-09,2011-04-15,2.0000,5.0000,5.0000,,0,train/backtest history
+12,2011-04-16,2011-04-22,0.0000,0.0000,0.0000,,0,train/backtest history
+13,2011-04-23,2011-04-29,0.0000,0.0000,0.0000,OrthodoxEaster; Pesach End,0,train/backtest history
+14,2011-04-30,2011-05-06,6.0000,4.0000,4.0000,Cinco De Mayo,0,train/backtest history
+15,2011-05-07,2011-05-13,4.0000,5.0000,4.0000,Mother's day,0,train/backtest history
+16,2011-05-14,2011-05-20,0.0000,1.0000,2.0000,,0,train/backtest history
+17,2011-05-21,2011-05-27,0.0000,0.0000,0.0000,,0,train/backtest history
+18,2011-05-28,2011-06-03,3.0000,2.0000,2.0000,MemorialDay; NBAFinalsStart,0,train/backtest history
+19,2011-06-04,2011-06-10,7.0000,4.0000,4.0000,,0,train/backtest history
+20,2011-06-11,2011-06-17,0.0000,4.0000,4.0000,NBAFinalsEnd,0,train/backtest history
+21,2011-06-18,2011-06-24,0.0000,0.0000,0.0000,Father's day,0,train/backtest history
+22,2011-06-25,2011-07-01,1.0000,1.0000,0.0000,,0,train/backtest history
+23,2011-07-02,2011-07-08,7.0000,4.0000,5.0000,IndependenceDay,0,train/backtest history
+24,2011-07-09,2011-07-15,2.0000,5.0000,5.0000,,0,train/backtest history
+25,2011-07-16,2011-07-22,0.0000,0.0000,0.0000,,0,train/backtest history
+26,2011-07-23,2011-07-29,0.0000,0.0000,0.0000,,0,train/backtest history
+27,2011-07-30,2011-08-05,5.0000,3.0000,3.0000,Ramadan starts,0,train/backtest history
+28,2011-08-06,2011-08-12,5.0000,5.0000,5.0000,,0,train/backtest history
+29,2011-08-13,2011-08-19,0.0000,2.0000,2.0000,,0,train/backtest history
+30,2011-08-20,2011-08-26,0.0000,0.0000,0.0000,,0,train/backtest history
+31,2011-08-27,2011-09-02,2.0000,1.0000,1.0000,Eid al-Fitr,0,train/backtest history
+32,2011-09-03,2011-09-09,7.0000,5.0000,5.0000,LaborDay,0,train/backtest history
+33,2011-09-10,2011-09-16,1.0000,4.0000,4.0000,,0,train/backtest history
+34,2011-09-17,2011-09-23,0.0000,0.0000,0.0000,,0,train/backtest history
+35,2011-09-24,2011-09-30,0.0000,0.0000,0.0000,,0,train/backtest history
+36,2011-10-01,2011-10-07,7.0000,5.0000,4.0000,,0,train/backtest history
+37,2011-10-08,2011-10-14,3.0000,4.0000,5.0000,ColumbusDay,0,train/backtest history
+38,2011-10-15,2011-10-21,0.0000,1.0000,1.0000,,0,train/backtest history
+39,2011-10-22,2011-10-28,0.0000,0.0000,0.0000,,0,train/backtest history
+40,2011-10-29,2011-11-04,4.0000,2.0000,2.0000,Halloween,0,train/backtest history
+41,2011-11-05,2011-11-11,6.0000,5.0000,5.0000,EidAlAdha; VeteransDay,0,train/backtest history
+42,2011-11-12,2011-11-18,0.0000,3.0000,3.0000,,0,train/backtest history
+43,2011-11-19,2011-11-25,0.0000,0.0000,0.0000,Thanksgiving,0,train/backtest history
+44,2011-11-26,2011-12-02,2.0000,1.0000,1.0000,,0,train/backtest history
+45,2011-12-03,2011-12-09,7.0000,5.0000,5.0000,,0,train/backtest history
+46,2011-12-10,2011-12-16,1.0000,4.0000,4.0000,,0,train/backtest history
+47,2011-12-17,2011-12-23,0.0000,0.0000,0.0000,,0,train/backtest history
+48,2011-12-24,2011-12-30,0.0000,0.0000,0.0000,Chanukah End; Christmas,1,train/backtest history
+49,2011-12-31,2012-01-06,6.0000,4.0000,4.0000,NewYear,0,train/backtest history
+50,2012-01-07,2012-01-13,4.0000,5.0000,4.0000,OrthodoxChristmas,0,train/backtest history
+51,2012-01-14,2012-01-20,0.0000,1.0000,2.0000,MartinLutherKingDay,0,train/backtest history
+52,2012-01-21,2012-01-27,0.0000,0.0000,0.0000,,0,train/backtest history
+53,2012-01-28,2012-02-03,3.0000,2.0000,2.0000,,0,train/backtest history
+54,2012-02-04,2012-02-10,7.0000,4.0000,4.0000,SuperBowl,0,train/backtest history
+55,2012-02-11,2012-02-17,0.0000,4.0000,4.0000,ValentinesDay,0,train/backtest history
+56,2012-02-18,2012-02-24,0.0000,0.0000,0.0000,LentStart; PresidentsDay,0,train/backtest history
+57,2012-02-25,2012-03-02,2.0000,1.0000,1.0000,LentWeek2,0,train/backtest history
+58,2012-03-03,2012-03-09,7.0000,5.0000,5.0000,Purim End,0,train/backtest history
+59,2012-03-10,2012-03-16,1.0000,4.0000,4.0000,,0,train/backtest history
+60,2012-03-17,2012-03-23,0.0000,0.0000,0.0000,StPatricksDay,0,train/backtest history
+61,2012-03-24,2012-03-30,0.0000,0.0000,0.0000,,0,train/backtest history
+62,2012-03-31,2012-04-06,6.0000,4.0000,4.0000,,0,train/backtest history
+63,2012-04-07,2012-04-13,4.0000,5.0000,4.0000,Easter,0,train/backtest history
+64,2012-04-14,2012-04-20,0.0000,1.0000,2.0000,OrthodoxEaster; Pesach End,0,train/backtest history
+65,2012-04-21,2012-04-27,0.0000,0.0000,0.0000,,0,train/backtest history
+66,2012-04-28,2012-05-04,4.0000,2.0000,2.0000,,0,train/backtest history
+67,2012-05-05,2012-05-11,6.0000,5.0000,5.0000,Cinco De Mayo,0,train/backtest history
+68,2012-05-12,2012-05-18,0.0000,3.0000,3.0000,Mother's day,0,train/backtest history
+69,2012-05-19,2012-05-25,0.0000,0.0000,0.0000,,0,train/backtest history
+70,2012-05-26,2012-06-01,1.0000,1.0000,0.0000,MemorialDay,0,train/backtest history
+71,2012-06-02,2012-06-08,7.0000,4.0000,5.0000,,0,train/backtest history
+72,2012-06-09,2012-06-15,2.0000,5.0000,5.0000,NBAFinalsStart,0,train/backtest history
+73,2012-06-16,2012-06-22,0.0000,0.0000,0.0000,Father's day; NBAFinalsEnd,0,train/backtest history
+74,2012-06-23,2012-06-29,0.0000,0.0000,0.0000,,0,train/backtest history
+75,2012-06-30,2012-07-06,6.0000,4.0000,4.0000,IndependenceDay,0,train/backtest history
+76,2012-07-07,2012-07-13,4.0000,5.0000,4.0000,,0,train/backtest history
+77,2012-07-14,2012-07-20,0.0000,1.0000,2.0000,Ramadan starts,0,train/backtest history
+78,2012-07-21,2012-07-27,0.0000,0.0000,0.0000,,0,train/backtest history
+79,2012-07-28,2012-08-03,3.0000,2.0000,2.0000,,0,train/backtest history
+80,2012-08-04,2012-08-10,7.0000,4.0000,4.0000,,0,train/backtest history
+81,2012-08-11,2012-08-17,0.0000,4.0000,4.0000,,0,train/backtest history
+82,2012-08-18,2012-08-24,0.0000,0.0000,0.0000,Eid al-Fitr,0,train/backtest history
+83,2012-08-25,2012-08-31,0.0000,0.0000,0.0000,,0,train/backtest history
+84,2012-09-01,2012-09-07,7.0000,5.0000,4.0000,LaborDay,0,train/backtest history
+85,2012-09-08,2012-09-14,3.0000,4.0000,5.0000,,0,train/backtest history
+86,2012-09-15,2012-09-21,0.0000,1.0000,1.0000,,0,train/backtest history
+87,2012-09-22,2012-09-28,0.0000,0.0000,0.0000,,0,train/backtest history
+88,2012-09-29,2012-10-05,5.0000,3.0000,3.0000,,0,train/backtest history
+89,2012-10-06,2012-10-12,5.0000,5.0000,5.0000,ColumbusDay,0,train/backtest history
+90,2012-10-13,2012-10-19,0.0000,2.0000,2.0000,,0,train/backtest history
+91,2012-10-20,2012-10-26,0.0000,0.0000,0.0000,EidAlAdha,0,train/backtest history
+92,2012-10-27,2012-11-02,2.0000,1.0000,1.0000,Halloween,0,train/backtest history
+93,2012-11-03,2012-11-09,7.0000,5.0000,5.0000,,0,train/backtest history
+94,2012-11-10,2012-11-16,1.0000,4.0000,4.0000,VeteransDay,0,train/backtest history
+95,2012-11-17,2012-11-23,0.0000,0.0000,0.0000,Thanksgiving,0,train/backtest history
+96,2012-11-24,2012-11-30,0.0000,0.0000,0.0000,,0,train/backtest history
+97,2012-12-01,2012-12-07,7.0000,5.0000,4.0000,,0,train/backtest history
+98,2012-12-08,2012-12-14,3.0000,4.0000,5.0000,,0,train/backtest history
+99,2012-12-15,2012-12-21,0.0000,1.0000,1.0000,Chanukah End,0,train/backtest history
+100,2012-12-22,2012-12-28,0.0000,0.0000,0.0000,Christmas,1,train/backtest history
+101,2012-12-29,2013-01-04,4.0000,2.0000,2.0000,NewYear,0,train/backtest history
+102,2013-01-05,2013-01-11,6.0000,5.0000,5.0000,OrthodoxChristmas,0,train/backtest history
+103,2013-01-12,2013-01-18,0.0000,3.0000,3.0000,,0,train/backtest history
+104,2013-01-19,2013-01-25,0.0000,0.0000,0.0000,MartinLutherKingDay,0,train/backtest history
+105,2013-01-26,2013-02-01,1.0000,1.0000,0.0000,,0,train/backtest history
+106,2013-02-02,2013-02-08,7.0000,4.0000,5.0000,SuperBowl,0,train/backtest history
+107,2013-02-09,2013-02-15,2.0000,5.0000,5.0000,LentStart; ValentinesDay,0,train/backtest history
+108,2013-02-16,2013-02-22,0.0000,0.0000,0.0000,LentWeek2; PresidentsDay,0,train/backtest history
+109,2013-02-23,2013-03-01,1.0000,1.0000,0.0000,Purim End,0,train/backtest history
+110,2013-03-02,2013-03-08,7.0000,4.0000,5.0000,,0,train/backtest history
+111,2013-03-09,2013-03-15,2.0000,5.0000,5.0000,,0,train/backtest history
+112,2013-03-16,2013-03-22,0.0000,0.0000,0.0000,StPatricksDay,0,train/backtest history
+113,2013-03-23,2013-03-29,0.0000,0.0000,0.0000,,0,train/backtest history
+114,2013-03-30,2013-04-05,5.0000,3.0000,3.0000,Easter; Pesach End,0,train/backtest history
+115,2013-04-06,2013-04-12,5.0000,5.0000,5.0000,,0,train/backtest history
+116,2013-04-13,2013-04-19,0.0000,2.0000,2.0000,,0,train/backtest history
+117,2013-04-20,2013-04-26,0.0000,0.0000,0.0000,,0,train/backtest history
+118,2013-04-27,2013-05-03,3.0000,2.0000,2.0000,,0,train/backtest history
+119,2013-05-04,2013-05-10,7.0000,4.0000,4.0000,OrthodoxEaster,0,train/backtest history
+120,2013-05-11,2013-05-17,0.0000,4.0000,4.0000,Mother's day,0,train/backtest history
+121,2013-05-18,2013-05-24,0.0000,0.0000,0.0000,,0,train/backtest history
+122,2013-05-25,2013-05-31,0.0000,0.0000,0.0000,MemorialDay,0,train/backtest history
+123,2013-06-01,2013-06-07,7.0000,5.0000,4.0000,NBAFinalsStart,0,train/backtest history
+124,2013-06-08,2013-06-14,3.0000,4.0000,5.0000,,0,train/backtest history
+125,2013-06-15,2013-06-21,0.0000,1.0000,1.0000,Father's day; NBAFinalsEnd,0,train/backtest history
+126,2013-06-22,2013-06-28,0.0000,0.0000,0.0000,,0,train/backtest history
+127,2013-06-29,2013-07-05,5.0000,3.0000,3.0000,IndependenceDay,0,train/backtest history
+128,2013-07-06,2013-07-12,5.0000,5.0000,5.0000,Ramadan starts,0,train/backtest history
+129,2013-07-13,2013-07-19,0.0000,2.0000,2.0000,,0,train/backtest history
+130,2013-07-20,2013-07-26,0.0000,0.0000,0.0000,,0,train/backtest history
+131,2013-07-27,2013-08-02,2.0000,1.0000,1.0000,,0,train/backtest history
+132,2013-08-03,2013-08-09,7.0000,5.0000,5.0000,Eid al-Fitr,0,train/backtest history
+133,2013-08-10,2013-08-16,1.0000,4.0000,4.0000,,0,train/backtest history
+134,2013-08-17,2013-08-23,0.0000,0.0000,0.0000,,0,train/backtest history
+135,2013-08-24,2013-08-30,0.0000,0.0000,0.0000,,0,train/backtest history
+136,2013-08-31,2013-09-06,6.0000,4.0000,4.0000,LaborDay,0,train/backtest history
+137,2013-09-07,2013-09-13,4.0000,5.0000,4.0000,,0,train/backtest history
+138,2013-09-14,2013-09-20,0.0000,1.0000,2.0000,,0,train/backtest history
+139,2013-09-21,2013-09-27,0.0000,0.0000,0.0000,,0,train/backtest history
+140,2013-09-28,2013-10-04,4.0000,2.0000,2.0000,,0,train/backtest history
+141,2013-10-05,2013-10-11,6.0000,5.0000,5.0000,,0,train/backtest history
+142,2013-10-12,2013-10-18,0.0000,3.0000,3.0000,ColumbusDay; EidAlAdha,0,train/backtest history
+143,2013-10-19,2013-10-25,0.0000,0.0000,0.0000,,0,train/backtest history
+144,2013-10-26,2013-11-01,1.0000,1.0000,0.0000,Halloween,0,train/backtest history
+145,2013-11-02,2013-11-08,7.0000,4.0000,5.0000,,0,train/backtest history
+146,2013-11-09,2013-11-15,2.0000,5.0000,5.0000,VeteransDay,0,train/backtest history
+147,2013-11-16,2013-11-22,0.0000,0.0000,0.0000,,0,train/backtest history
+148,2013-11-23,2013-11-29,0.0000,0.0000,0.0000,Thanksgiving,0,train/backtest history
+149,2013-11-30,2013-12-06,6.0000,4.0000,4.0000,Chanukah End,0,train/backtest history
+150,2013-12-07,2013-12-13,4.0000,5.0000,4.0000,,0,train/backtest history
+151,2013-12-14,2013-12-20,0.0000,1.0000,2.0000,,0,train/backtest history
+152,2013-12-21,2013-12-27,0.0000,0.0000,0.0000,Christmas,1,train/backtest history
+153,2013-12-28,2014-01-03,3.0000,2.0000,2.0000,NewYear,0,train/backtest history
+154,2014-01-04,2014-01-10,7.0000,4.0000,4.0000,OrthodoxChristmas,0,train/backtest history
+155,2014-01-11,2014-01-17,0.0000,4.0000,4.0000,,0,train/backtest history
+156,2014-01-18,2014-01-24,0.0000,0.0000,0.0000,MartinLutherKingDay,0,train/backtest history
+157,2014-01-25,2014-01-31,0.0000,0.0000,0.0000,,0,train/backtest history
+158,2014-02-01,2014-02-07,7.0000,5.0000,4.0000,SuperBowl,0,train/backtest history
+159,2014-02-08,2014-02-14,3.0000,4.0000,5.0000,ValentinesDay,0,train/backtest history
+160,2014-02-15,2014-02-21,0.0000,1.0000,1.0000,PresidentsDay,0,train/backtest history
+161,2014-02-22,2014-02-28,0.0000,0.0000,0.0000,,0,train/backtest history
+162,2014-03-01,2014-03-07,7.0000,5.0000,4.0000,LentStart,0,train/backtest history
+163,2014-03-08,2014-03-14,3.0000,4.0000,5.0000,LentWeek2,0,train/backtest history
+164,2014-03-15,2014-03-21,0.0000,1.0000,1.0000,Purim End; StPatricksDay,0,train/backtest history
+165,2014-03-22,2014-03-28,0.0000,0.0000,0.0000,,0,train/backtest history
+166,2014-03-29,2014-04-04,4.0000,2.0000,2.0000,,0,train/backtest history
+167,2014-04-05,2014-04-11,6.0000,5.0000,5.0000,,0,train/backtest history
+168,2014-04-12,2014-04-18,0.0000,3.0000,3.0000,,0,train/backtest history
+169,2014-04-19,2014-04-25,0.0000,0.0000,0.0000,Easter; Pesach End,0,train/backtest history
+170,2014-04-26,2014-05-02,2.0000,1.0000,1.0000,,0,train/backtest history
+171,2014-05-03,2014-05-09,7.0000,5.0000,5.0000,Cinco De Mayo,0,train/backtest history
+172,2014-05-10,2014-05-16,1.0000,4.0000,4.0000,Mother's day,0,train/backtest history
+173,2014-05-17,2014-05-23,0.0000,0.0000,0.0000,,0,train/backtest history
+174,2014-05-24,2014-05-30,0.0000,0.0000,0.0000,MemorialDay,0,train/backtest history
+175,2014-05-31,2014-06-06,6.0000,4.0000,4.0000,NBAFinalsStart,0,train/backtest history
+176,2014-06-07,2014-06-13,4.0000,5.0000,4.0000,,0,train/backtest history
+177,2014-06-14,2014-06-20,0.0000,1.0000,2.0000,NBAFinalsEnd,0,train/backtest history
+178,2014-06-21,2014-06-27,0.0000,0.0000,0.0000,,0,train/backtest history
+179,2014-06-28,2014-07-04,4.0000,2.0000,2.0000,IndependenceDay; Ramadan starts,0,train/backtest history
+180,2014-07-05,2014-07-11,6.0000,5.0000,5.0000,,0,train/backtest history
+181,2014-07-12,2014-07-18,0.0000,3.0000,3.0000,,0,train/backtest history
+182,2014-07-19,2014-07-25,0.0000,0.0000,0.0000,,0,train/backtest history
+183,2014-07-26,2014-08-01,1.0000,1.0000,0.0000,Eid al-Fitr,0,train/backtest history
+184,2014-08-02,2014-08-08,7.0000,4.0000,5.0000,,0,train/backtest history
+185,2014-08-09,2014-08-15,2.0000,5.0000,5.0000,,0,train/backtest history
+186,2014-08-16,2014-08-22,0.0000,0.0000,0.0000,,0,train/backtest history
+187,2014-08-23,2014-08-29,0.0000,0.0000,0.0000,,0,train/backtest history
+188,2014-08-30,2014-09-05,5.0000,3.0000,3.0000,LaborDay,0,train/backtest history
+189,2014-09-06,2014-09-12,5.0000,5.0000,5.0000,,0,train/backtest history
+190,2014-09-13,2014-09-19,0.0000,2.0000,2.0000,,0,train/backtest history
+191,2014-09-20,2014-09-26,0.0000,0.0000,0.0000,,0,train/backtest history
+192,2014-09-27,2014-10-03,3.0000,2.0000,2.0000,,0,train/backtest history
+193,2014-10-04,2014-10-10,7.0000,4.0000,4.0000,EidAlAdha,0,train/backtest history
+194,2014-10-11,2014-10-17,0.0000,4.0000,4.0000,ColumbusDay,0,train/backtest history
+195,2014-10-18,2014-10-24,0.0000,0.0000,0.0000,,0,train/backtest history
+196,2014-10-25,2014-10-31,0.0000,0.0000,0.0000,Halloween,0,train/backtest history
+197,2014-11-01,2014-11-07,7.0000,5.0000,4.0000,,0,train/backtest history
+198,2014-11-08,2014-11-14,3.0000,4.0000,5.0000,VeteransDay,0,train/backtest history
+199,2014-11-15,2014-11-21,0.0000,1.0000,1.0000,,0,train/backtest history
+200,2014-11-22,2014-11-28,0.0000,0.0000,0.0000,Thanksgiving,0,train/backtest history
+201,2014-11-29,2014-12-05,5.0000,3.0000,3.0000,,0,train/backtest history
+202,2014-12-06,2014-12-12,5.0000,5.0000,5.0000,,0,train/backtest history
+203,2014-12-13,2014-12-19,0.0000,2.0000,2.0000,,0,train/backtest history
+204,2014-12-20,2014-12-26,0.0000,0.0000,0.0000,Chanukah End; Christmas,1,train/backtest history
+205,2014-12-27,2015-01-02,2.0000,1.0000,1.0000,NewYear,0,train/backtest history
+206,2015-01-03,2015-01-09,7.0000,5.0000,5.0000,OrthodoxChristmas,0,train/backtest history
+207,2015-01-10,2015-01-16,1.0000,4.0000,4.0000,,0,train/backtest history
+208,2015-01-17,2015-01-23,0.0000,0.0000,0.0000,MartinLutherKingDay,0,train/backtest history
+209,2015-01-24,2015-01-30,0.0000,0.0000,0.0000,,0,train/backtest history
+210,2015-01-31,2015-02-06,6.0000,4.0000,4.0000,SuperBowl,0,train/backtest history
+211,2015-02-07,2015-02-13,4.0000,5.0000,4.0000,,0,train/backtest history
+212,2015-02-14,2015-02-20,0.0000,1.0000,2.0000,LentStart; PresidentsDay; ValentinesDay,0,train/backtest history
+213,2015-02-21,2015-02-27,0.0000,0.0000,0.0000,LentWeek2,0,train/backtest history
+214,2015-02-28,2015-03-06,6.0000,4.0000,4.0000,Purim End,0,train/backtest history
+215,2015-03-07,2015-03-13,4.0000,5.0000,4.0000,,0,train/backtest history
+216,2015-03-14,2015-03-20,0.0000,1.0000,2.0000,StPatricksDay,0,train/backtest history
+217,2015-03-21,2015-03-27,0.0000,0.0000,0.0000,,0,train/backtest history
+218,2015-03-28,2015-04-03,3.0000,2.0000,2.0000,,0,train/backtest history
+219,2015-04-04,2015-04-10,7.0000,4.0000,4.0000,Easter,0,train/backtest history
+220,2015-04-11,2015-04-17,0.0000,4.0000,4.0000,OrthodoxEaster; Pesach End,0,train/backtest history
+221,2015-04-18,2015-04-24,0.0000,0.0000,0.0000,,0,train/backtest history
+222,2015-04-25,2015-05-01,1.0000,1.0000,0.0000,,0,train/backtest history
+223,2015-05-02,2015-05-08,7.0000,4.0000,5.0000,Cinco De Mayo,0,train/backtest history
+224,2015-05-09,2015-05-15,2.0000,5.0000,5.0000,Mother's day,0,train/backtest history
+225,2015-05-16,2015-05-22,0.0000,0.0000,0.0000,,0,train/backtest history
+226,2015-05-23,2015-05-29,0.0000,0.0000,0.0000,MemorialDay,0,train/backtest history
+227,2015-05-30,2015-06-05,5.0000,3.0000,3.0000,NBAFinalsStart,0,train/backtest history
+228,2015-06-06,2015-06-12,5.0000,5.0000,5.0000,,0,train/backtest history
+229,2015-06-13,2015-06-19,0.0000,2.0000,2.0000,NBAFinalsEnd; Ramadan starts,0,train/backtest history
+230,2015-06-20,2015-06-26,0.0000,0.0000,0.0000,Father's day,0,train/backtest history
+231,2015-06-27,2015-07-03,3.0000,2.0000,2.0000,,0,train/backtest history
+232,2015-07-04,2015-07-10,7.0000,4.0000,4.0000,IndependenceDay,0,train/backtest history
+233,2015-07-11,2015-07-17,0.0000,4.0000,4.0000,,0,train/backtest history
+234,2015-07-18,2015-07-24,0.0000,0.0000,0.0000,Eid al-Fitr,0,train/backtest history
+235,2015-07-25,2015-07-31,0.0000,0.0000,0.0000,,0,train/backtest history
+236,2015-08-01,2015-08-07,7.0000,5.0000,4.0000,,0,train/backtest history
+237,2015-08-08,2015-08-14,3.0000,4.0000,5.0000,,0,train/backtest history
+238,2015-08-15,2015-08-21,0.0000,1.0000,1.0000,,0,train/backtest history
+239,2015-08-22,2015-08-28,0.0000,0.0000,0.0000,,0,train/backtest history
+240,2015-08-29,2015-09-04,4.0000,2.0000,2.0000,,0,train/backtest history
+241,2015-09-05,2015-09-11,6.0000,5.0000,5.0000,LaborDay,0,train/backtest history
+242,2015-09-12,2015-09-18,0.0000,3.0000,3.0000,,0,train/backtest history
+243,2015-09-19,2015-09-25,0.0000,0.0000,0.0000,EidAlAdha,0,train/backtest history
+244,2015-09-26,2015-10-02,2.0000,1.0000,1.0000,,0,train/backtest history
+245,2015-10-03,2015-10-09,7.0000,5.0000,5.0000,,0,train/backtest history
+246,2015-10-10,2015-10-16,1.0000,4.0000,4.0000,ColumbusDay,0,train/backtest history
+247,2015-10-17,2015-10-23,0.0000,0.0000,0.0000,,0,train/backtest history
+248,2015-10-24,2015-10-30,0.0000,0.0000,0.0000,,0,train/backtest history
+249,2015-10-31,2015-11-06,6.0000,4.0000,4.0000,Halloween,0,train/backtest history
+250,2015-11-07,2015-11-13,4.0000,5.0000,4.0000,VeteransDay,0,train/backtest history
+251,2015-11-14,2015-11-20,0.0000,1.0000,2.0000,,0,train/backtest history
+252,2015-11-21,2015-11-27,0.0000,0.0000,0.0000,Thanksgiving,0,train/backtest history
+253,2015-11-28,2015-12-04,4.0000,2.0000,2.0000,,0,train/backtest history
+254,2015-12-05,2015-12-11,6.0000,5.0000,5.0000,,0,test target week
+255,2015-12-12,2015-12-18,0.0000,3.0000,3.0000,Chanukah End,0,test target week
+256,2015-12-19,2015-12-25,0.0000,0.0000,0.0000,Christmas,1,test target week
+257,2015-12-26,2016-01-01,1.0000,1.0000,0.0000,NewYear,0,test target week
+258,2016-01-02,2016-01-08,7.0000,4.0000,5.0000,OrthodoxChristmas,0,test target week
+259,2016-01-09,2016-01-15,2.0000,5.0000,5.0000,,0,test target week
+260,2016-01-16,2016-01-22,0.0000,0.0000,0.0000,MartinLutherKingDay,0,test target week
+261,2016-01-23,2016-01-29,0.0000,0.0000,0.0000,,0,test target week
+262,2016-01-30,2016-02-05,5.0000,3.0000,3.0000,,0,test target week
+263,2016-02-06,2016-02-12,5.0000,5.0000,5.0000,LentStart; SuperBowl,0,test target week
+264,2016-02-13,2016-02-19,0.0000,2.0000,2.0000,LentWeek2; PresidentsDay; ValentinesDay,0,test target week
+265,2016-02-20,2016-02-26,0.0000,0.0000,0.0000,,0,test target week
+266,2016-02-27,2016-03-04,4.0000,2.0000,2.0000,,0,test target week
+267,2016-03-05,2016-03-11,6.0000,5.0000,5.0000,,0,test target week
+268,2016-03-12,2016-03-18,0.0000,3.0000,3.0000,StPatricksDay,0,test target week
+269,2016-03-19,2016-03-25,0.0000,0.0000,0.0000,Purim End,0,test target week
+270,2016-03-26,2016-04-01,1.0000,1.0000,0.0000,Easter,0,test target week
+271,2016-04-02,2016-04-08,7.0000,4.0000,5.0000,,0,test target week
+272,2016-04-09,2016-04-15,2.0000,5.0000,5.0000,,0,test target week
+273,2016-04-16,2016-04-22,0.0000,0.0000,0.0000,,0,test target week
+274,2016-04-23,2016-04-29,0.0000,0.0000,0.0000,,0,test target week
+275,2016-04-30,2016-05-06,6.0000,4.0000,4.0000,Cinco De Mayo; OrthodoxEaster; Pesach End,0,test target week
+276,2016-05-07,2016-05-13,4.0000,5.0000,4.0000,Mother's day,0,test target week
+277,2016-05-14,2016-05-20,0.0000,1.0000,2.0000,,0,test target week

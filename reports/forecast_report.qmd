@@ -1,0 +1,117 @@
+---
+title: "Retail Revenue Forecasting: reconciliation, residual tests and calibration (R report)"
+subtitle: "M5 Walmart weekly revenue, 154-node hierarchy, rolling-origin backtest, 4-week horizon"
+format:
+  html:
+    toc: true
+    embed-resources: true
+    code-fold: true
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r setup}
+user_lib <- Sys.getenv("R_LIBS_USER_EXTRA", unset = file.path(Sys.getenv("HOME"), "R", "lib"))
+if (dir.exists(user_lib)) .libPaths(c(user_lib, .libPaths()))
+library(readr); library(dplyr); library(tidyr); library(ggplot2); library(knitr)
+root <- if (file.exists("../tableau/data")) ".." else "."
+td <- file.path(root, "tableau/data"); pr <- file.path(root, "data/processed")
+sc  <- read_csv(file.path(td, "metric_scorecard.csv"), show_col_types = FALSE)
+rc  <- read_csv(file.path(td, "reconciliation_comparison.csv"), show_col_types = FALSE)
+cov <- read_csv(file.path(td, "interval_coverage.csv"), show_col_types = FALSE)
+cg  <- read_csv(file.path(td, "coherence_gap.csv"), show_col_types = FALSE)
+rs  <- read_csv(file.path(td, "residual_diagnostics_summary.csv"), show_col_types = FALSE)
+lvl <- c("Total","State","Store","Category","Dept","State x Cat","State x Dept","Store x Cat","Store x Dept")
+```
+
+## What this report covers
+
+The R side of the project: `fable` ETS (on an STL seasonally adjusted series) and dynamic harmonic regression ARIMA (four Fourier pairs, period 52)
+fitted on all 154 nodes of the M5 hierarchy (3 states, 10 stores, 3 categories, 7 departments and their crossings), refitted at 12 rolling
+origins (6 validation, 6 test), then reconciled with bottom-up, OLS, WLS (structural and variance) and MinT shrinkage. Top-down methods need a
+strict hierarchy, so they are evaluated on the geographic sub-hierarchy Total > State > Store > Store x Department (84 nodes). Every forecast, R or
+Python, is scored by the same Python metric code, so the tables below are directly comparable with the Python models.
+The test window is the last six origins (weeks 254 to 277) and was not used for any choice.
+
+## Accuracy before and after reconciliation (test window, WAPE)
+
+```{r recon-table}
+x <- rc %>% filter(engine == "R fable", structure == "full 154 nodes", split == "test", metric == "WAPE") %>%
+  select(base_model, method, level_id, value) %>%
+  mutate(value = round(100 * value, 2)) %>%
+  pivot_wider(names_from = level_id, values_from = value)
+names(x)[-(1:2)] <- lvl[as.integer(names(x)[-(1:2)])]
+kable(x, caption = "WAPE (%) by hierarchy level, R fable base forecasts and reconciled forecasts")
+```
+
+```{r recon-plot, fig.width=9, fig.height=4}
+r <- rc %>% filter(engine == "R fable", structure == "full 154 nodes", split == "test", metric == "WAPE_ratio_vs_base")
+ggplot(r, aes(factor(level_id, labels = lvl[sort(unique(level_id))]), value, fill = method)) +
+  geom_col(position = position_dodge(0.8), width = 0.75) +
+  geom_errorbar(aes(ymin = ci_lo, ymax = ci_hi), position = position_dodge(0.8), width = 0.25, linewidth = 0.3) +
+  geom_hline(yintercept = 1) + facet_wrap(~base_model) +
+  scale_fill_manual(values = c("bottom-up"="#D55E00","OLS"="#E69F00","WLS structural"="#009E73","WLS variance"="#56B4E9","MinT shrink"="#0072B2")) +
+  labs(x = NULL, y = "WAPE ratio vs unreconciled base (below 1 = better)", fill = NULL,
+       title = "Paired bootstrap 95% intervals over nodes (Total: over origins)") +
+  theme_minimal() + theme(axis.text.x = element_text(angle = 25, hjust = 1))
+```
+
+### Top-down on the geographic sub-hierarchy (levels 1, 2, 3, 9)
+
+```{r td-table}
+g <- rc %>% filter(structure == "geographic 84 nodes", split == "test", metric == "WAPE") %>%
+  select(base_model, method, level_id, value) %>% mutate(value = round(100 * value, 2)) %>% pivot_wider(names_from = level_id, values_from = value)
+names(g)[-(1:2)] <- lvl[as.integer(names(g)[-(1:2)])]
+kable(g, caption = "WAPE (%), 84-node geographic hierarchy")
+```
+
+## Incoherence of base forecasts
+
+```{r coherence}
+cg %>% filter(model %in% c("r_ets_base", "r_arima_base", "ets", "sarima_airline", "lgbm_q")) %>%
+  mutate(level = lvl[level_id], gap_pct = round(100 * mean_abs_rel_gap, 2)) %>%
+  select(model, level, gap_pct) %>% pivot_wider(names_from = level, values_from = gap_pct) %>%
+  kable(caption = "Mean absolute gap between a node's base forecast and the sum of its bottom-level forecasts (% of the node forecast)")
+```
+
+## Residual tests
+
+Ljung-Box (lag 52, no degrees-of-freedom adjustment, so slightly conservative towards not rejecting) on the innovation residuals of the
+fit at the last test origin (273 weeks of training), and Shapiro-Wilk for the normality that Gaussian intervals rely on. The ETS component
+model has 52 missing residuals at the start (STL warm-up), which are dropped.
+
+```{r residuals}
+rs %>% mutate(level = lvl[level_id], across(where(is.numeric), ~ round(.x, 3))) %>%
+  select(model, level, n_nodes, share_ljung_box_rejected, median_ljung_box_p, median_lag1_acf, share_shapiro_rejected) %>%
+  kable(caption = "Share of nodes rejecting at 5 percent, by model and level")
+```
+
+## Interval calibration (test window)
+
+```{r calibration, fig.width=9, fig.height=4}
+c1 <- cov %>% filter(split == "test", level_id <= 9, model %in% c("r_ets_base","r_ets_mint","r_arima_base","r_arima_mint","sarima_airline","lgbm_q","lgbm_conformal","ets")) 
+ggplot(c1, aes(factor(level_id, labels = lvl[sort(unique(level_id))]), coverage, colour = model, group = model)) +
+  geom_hline(aes(yintercept = nominal / 100), linetype = 3) + geom_point() + geom_line() + facet_wrap(~nominal, labeller = label_both) +
+  labs(x = NULL, y = "Empirical coverage", title = "Empirical vs nominal coverage (dotted line = nominal)") +
+  theme_minimal() + theme(axis.text.x = element_text(angle = 25, hjust = 1))
+```
+
+## fabletools accuracy (R-native cross-check)
+
+```{r fabletools}
+a <- read_csv(file.path(pr, "r_accuracy.csv"), show_col_types = FALSE)
+if (nrow(a) > 0) {
+  a %>% filter(structure == "full154", origin >= 253) %>% group_by(base_model, recon) %>%
+    summarise(MASE = mean(MASE, na.rm = TRUE), RMSSE = mean(RMSSE, na.rm = TRUE), CRPS = mean(CRPS, na.rm = TRUE), .groups = "drop") %>%
+    mutate(across(where(is.numeric), ~ round(.x, 3))) %>%
+    kable(caption = "fabletools::accuracy, mean over all 154 nodes and test origins (unweighted, so dominated by small nodes)")
+}
+```
+
+## Session
+
+```{r session}
+cat(readLines(file.path(pr, "r_session_info.txt")), sep = "\n")
+```
