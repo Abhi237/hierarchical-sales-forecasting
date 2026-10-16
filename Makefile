@@ -18,7 +18,7 @@ sql:              ## numbered DuckDB scripts: staging, weeks, item-store weekly 
 backtest:         ## rolling-origin backtest: baselines, ETS, SARIMA, LightGBM quantile + conformal (hierarchy and item layers)
 	$(HF) backtest
 
-r:                ## fable ETS/ARIMA, reconciliation, Ljung-Box (Rscript; packages in renv.lock)
+r:                ## fable ETS/ARIMA, reconciliation, Ljung-Box (Rscript; package versions in R/sessionInfo.txt)
 	$(HF) r
 
 evaluate:         ## one metric code path over every model; Python reconciliation; artifacts/

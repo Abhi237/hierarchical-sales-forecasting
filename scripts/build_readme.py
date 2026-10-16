@@ -203,7 +203,7 @@ base models differ, so R-versus-Python comparisons mix model and implementation.
 ## Reproduce
 
 ```bash
-make setup            # python 3.11 venv, pinned deps (R: install fable, fabletools, feasts, tsibble, furrr, jsonlite; see renv.lock)
+make setup            # python 3.11 venv, pinned deps (R 4.5: install fable, fabletools, feasts, tsibble, dplyr, tidyr, furrr, jsonlite, readr, ggplot2, knitr; versions in R/sessionInfo.txt)
 make data             # download M5 files from public mirrors, verify shapes (about 360 MB)
 make sql backtest r evaluate export figures     # about 45 minutes on 8 cores (Python backtest about 25 min, R about 13 min, run concurrently)
 make report           # Quarto HTML (reports/), memo PDF, README
