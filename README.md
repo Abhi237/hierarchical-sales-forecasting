@@ -207,7 +207,7 @@ LightGBM improves at the top (bottom-up 0.85 and MinT 0.89 at Total) with almost
   makes ARIMA 23% worse at Total, 25% at State. OLS and WLS are mixed. Top-down with average proportions is 1.4x to 2.5x worse than base at State, Store and Store x Dept; forecast proportions are neutral to slightly better below Total (0.93 to 1.02 for ARIMA).
 * **Intervals:** at 95% nominal, statsforecast SARIMA and ETS cover about 84 to 92% and fable ARIMA base 86 to 92%; quantile LightGBM covers 86 to 96% and
   under-covers at 80% (50 to 74%); split-conformal LightGBM is closest to nominal at levels 2-9 (93 to 97% at 95%, 69 to 79% at 80%, excluding Category) but over-covers Category (100%). Coverage at Total rests on 24 forecasts only
-  and is noisy. **Reconciled fable intervals under-cover severely at aggregate levels** for bottom-up, OLS and both WLS methods (80% coverage 17% to 29% at Total and 18% to 42% at State for ARIMA); MinT shrink is the best of them
+  and is noisy. **Reconciled fable intervals under-cover severely at aggregate levels** for bottom-up, OLS and both WLS methods (80% coverage 17% to 29% at Total and 19% to 42% at State for ARIMA); MinT shrink is the best of them
   (57% to 71% at 80%, 82% to 88% at 95%) and sits below the unreconciled ARIMA base at most levels below Total. Do not use those reconciled intervals for planning at upper levels.
 * **Residuals:** the Ljung-Box test (lag 52, fit at the last test origin) rejects whiteness at 70% to 100% of ARIMA nodes by level and 33% to 100% of ETS nodes, so residual autocorrelation remains and the Gaussian intervals are
   mis-specified; with 277 weekly points and lag 52 the test is also demanding.
