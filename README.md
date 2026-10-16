@@ -236,7 +236,7 @@ make test             # ruff + pytest on the committed fixture (no raw data need
 python scripts/check_determinism.py snapshot artifacts/output_hashes.json
 ```
 
-Determinism: DuckDB single thread, fixed seeds, explicit orderings; DETERMINISM_RESULT_TODO
+Determinism: DuckDB single thread, fixed seeds, explicit orderings; two complete runs of the real pipeline (SQL, Python backtest, R, evaluate, export; run B started from scratch) produced identical SHA-256 for 31 of 32 hashed files, covering the raw forecast tables, the R outputs and every Tableau CSV except one. The one difference, `hierarchy_nodes.csv`, came from a revenue-share denominator bug that I fixed between the two runs; re-running only the export step twice on unchanged inputs then gave identical hashes for all 32 files. The hash list is committed
 (see `artifacts/output_hashes.json`).
 
 ## Repository layout
