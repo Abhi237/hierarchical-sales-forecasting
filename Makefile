@@ -31,7 +31,7 @@ figures:
 	$(HF) figures
 
 report:           ## Quarto/HTML report, memo PDF, README
-	cd reports && quarto render forecast_report.qmd --to html
+	cd reports && R_LIBS=$${R_LIBS_USER_EXTRA:-$$HOME/R/lib} quarto render forecast_report.qmd --to html
 	$(PY) scripts/build_memo.py
 	$(PY) scripts/build_readme.py
 
