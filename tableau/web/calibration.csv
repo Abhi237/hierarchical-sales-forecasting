@@ -1,0 +1,361 @@
+model_label,model,model_family,is_reconciled,level_order,level_name,nominal_pct,nominal_coverage,coverage,coverage_ci_lo,coverage_ci_hi,miscalibration,mean_width_over_revenue
+ETS (statsforecast AutoETS),ets,statistical (statsforecast),No,1,Total,80,0.800000,0.833330,0.583330,1.000000,0.033330,0.145300
+LightGBM + conformal,lgbm_conformal,machine learning (LightGBM),No,1,Total,80,0.800000,0.625000,0.375000,0.833330,-0.175000,0.086480
+LightGBM quantile,lgbm_q,machine learning (LightGBM),No,1,Total,80,0.800000,0.500000,0.291670,0.750000,-0.300000,0.073100
+Moving average (4 wk),ma4,baseline,No,1,Total,80,0.800000,0.625000,0.416670,0.791670,-0.175000,0.115130
+Naive,naive,baseline,No,1,Total,80,0.800000,0.541670,0.250000,0.833330,-0.258330,0.143080
+R fable ARIMA base,r_arima_base,"statistical (R fable, base)",No,1,Total,80,0.800000,0.541670,0.375000,0.750000,-0.258330,0.069830
+R fable ARIMA bottom-up,r_arima_bu,reconciled (R fable),Yes,1,Total,80,0.800000,0.250000,0.125000,0.375000,-0.550000,0.029570
+R fable ARIMA MinT shrink,r_arima_mint,reconciled (R fable),Yes,1,Total,80,0.800000,0.708330,0.500000,0.916670,-0.091670,0.061460
+R fable ARIMA OLS,r_arima_ols,reconciled (R fable),Yes,1,Total,80,0.800000,0.291670,0.250000,0.375000,-0.508330,0.035630
+R fable ARIMA WLS struct,r_arima_wls_struct,reconciled (R fable),Yes,1,Total,80,0.800000,0.166670,0.041670,0.250000,-0.633330,0.016980
+R fable ARIMA WLS var,r_arima_wls_var,reconciled (R fable),Yes,1,Total,80,0.800000,0.166670,0.041670,0.250000,-0.633330,0.014520
+R fable ETS base,r_ets_base,"statistical (R fable, base)",No,1,Total,80,0.800000,0.458330,0.250000,0.666670,-0.341670,0.055430
+R fable ETS bottom-up,r_ets_bu,reconciled (R fable),Yes,1,Total,80,0.800000,0.208330,0.041670,0.375000,-0.591670,0.025390
+R fable ETS MinT shrink,r_ets_mint,reconciled (R fable),Yes,1,Total,80,0.800000,0.416670,0.250000,0.583330,-0.383330,0.056660
+R fable ETS OLS,r_ets_ols,reconciled (R fable),Yes,1,Total,80,0.800000,0.291670,0.083330,0.500000,-0.508330,0.028640
+R fable ETS WLS struct,r_ets_wls_struct,reconciled (R fable),Yes,1,Total,80,0.800000,0.125000,0.000000,0.291670,-0.675000,0.013630
+R fable ETS WLS var,r_ets_wls_var,reconciled (R fable),Yes,1,Total,80,0.800000,0.125000,0.000000,0.291670,-0.675000,0.012010
+"SARIMA(1,1,1)(0,1,0)[52]",sarima_111_010,statistical (statsforecast),No,1,Total,80,0.800000,0.708330,0.583330,0.833330,-0.091670,0.069310
+"SARIMA(0,1,1)(0,1,1)[52]",sarima_airline,statistical (statsforecast),No,1,Total,80,0.800000,0.750000,0.625000,0.834370,-0.050000,0.066970
+Seasonal naive (52 wk),snaive,baseline,No,1,Total,80,0.800000,0.375000,0.166670,0.541670,-0.425000,0.262250
+ETS (statsforecast AutoETS),ets,statistical (statsforecast),No,1,Total,95,0.950000,0.833330,0.583330,1.000000,-0.116670,0.222220
+LightGBM + conformal,lgbm_conformal,machine learning (LightGBM),No,1,Total,95,0.950000,0.916670,0.833330,1.000000,-0.033330,0.134370
+LightGBM quantile,lgbm_q,machine learning (LightGBM),No,1,Total,95,0.950000,0.958330,0.875000,1.000000,0.008330,0.136360
+Moving average (4 wk),ma4,baseline,No,1,Total,95,0.950000,0.875000,0.708330,1.000000,-0.075000,0.176070
+Naive,naive,baseline,No,1,Total,95,0.950000,0.875000,0.708330,1.000000,-0.075000,0.218820
+R fable ARIMA base,r_arima_base,"statistical (R fable, base)",No,1,Total,95,0.950000,0.916670,0.750000,1.000000,-0.033330,0.106800
+R fable ARIMA bottom-up,r_arima_bu,reconciled (R fable),Yes,1,Total,95,0.950000,0.333330,0.166670,0.541670,-0.616670,0.045230
+R fable ARIMA MinT shrink,r_arima_mint,reconciled (R fable),Yes,1,Total,95,0.950000,0.875000,0.708330,1.000000,-0.075000,0.093990
+R fable ARIMA OLS,r_arima_ols,reconciled (R fable),Yes,1,Total,95,0.950000,0.458330,0.291670,0.667710,-0.491670,0.054500
+R fable ARIMA WLS struct,r_arima_wls_struct,reconciled (R fable),Yes,1,Total,95,0.950000,0.166670,0.041670,0.250000,-0.783330,0.025970
+R fable ARIMA WLS var,r_arima_wls_var,reconciled (R fable),Yes,1,Total,95,0.950000,0.208330,0.083330,0.375000,-0.741670,0.022200
+R fable ETS base,r_ets_base,"statistical (R fable, base)",No,1,Total,95,0.950000,0.666670,0.500000,0.833330,-0.283330,0.084780
+R fable ETS bottom-up,r_ets_bu,reconciled (R fable),Yes,1,Total,95,0.950000,0.291670,0.083330,0.500000,-0.658330,0.038830
+R fable ETS MinT shrink,r_ets_mint,reconciled (R fable),Yes,1,Total,95,0.950000,0.625000,0.416670,0.833330,-0.325000,0.086660
+R fable ETS OLS,r_ets_ols,reconciled (R fable),Yes,1,Total,95,0.950000,0.333330,0.125000,0.541670,-0.616670,0.043800
+R fable ETS WLS struct,r_ets_wls_struct,reconciled (R fable),Yes,1,Total,95,0.950000,0.125000,0.000000,0.291670,-0.825000,0.020850
+R fable ETS WLS var,r_ets_wls_var,reconciled (R fable),Yes,1,Total,95,0.950000,0.125000,0.000000,0.291670,-0.825000,0.018360
+"SARIMA(1,1,1)(0,1,0)[52]",sarima_111_010,statistical (statsforecast),No,1,Total,95,0.950000,0.875000,0.791670,0.958330,-0.075000,0.106000
+"SARIMA(0,1,1)(0,1,1)[52]",sarima_airline,statistical (statsforecast),No,1,Total,95,0.950000,0.875000,0.791670,0.958330,-0.075000,0.102430
+Seasonal naive (52 wk),snaive,baseline,No,1,Total,95,0.950000,0.958330,0.875000,1.000000,0.008330,0.401080
+ETS (statsforecast AutoETS),ets,statistical (statsforecast),No,2,State,80,0.800000,0.666670,0.597220,0.791670,-0.133330,0.153340
+LightGBM + conformal,lgbm_conformal,machine learning (LightGBM),No,2,State,80,0.800000,0.694440,0.416670,0.875000,-0.105560,0.108890
+LightGBM quantile,lgbm_q,machine learning (LightGBM),No,2,State,80,0.800000,0.583330,0.541670,0.625000,-0.216670,0.083040
+Moving average (4 wk),ma4,baseline,No,2,State,80,0.800000,0.625000,0.500000,0.722220,-0.175000,0.129190
+Naive,naive,baseline,No,2,State,80,0.800000,0.666670,0.583330,0.708330,-0.133330,0.157670
+R fable ARIMA base,r_arima_base,"statistical (R fable, base)",No,2,State,80,0.800000,0.708330,0.666670,0.750000,-0.091670,0.087290
+R fable ARIMA bottom-up,r_arima_bu,reconciled (R fable),Yes,2,State,80,0.800000,0.361110,0.333330,0.416670,-0.438890,0.050600
+R fable ARIMA MinT shrink,r_arima_mint,reconciled (R fable),Yes,2,State,80,0.800000,0.611110,0.597220,0.625000,-0.188890,0.077630
+R fable ARIMA OLS,r_arima_ols,reconciled (R fable),Yes,2,State,80,0.800000,0.416670,0.291670,0.486110,-0.383330,0.054250
+R fable ARIMA WLS struct,r_arima_wls_struct,reconciled (R fable),Yes,2,State,80,0.800000,0.250000,0.166670,0.319440,-0.550000,0.029770
+R fable ARIMA WLS var,r_arima_wls_var,reconciled (R fable),Yes,2,State,80,0.800000,0.194440,0.125000,0.236110,-0.605560,0.026260
+R fable ETS base,r_ets_base,"statistical (R fable, base)",No,2,State,80,0.800000,0.500000,0.333330,0.597220,-0.300000,0.070480
+R fable ETS bottom-up,r_ets_bu,reconciled (R fable),Yes,2,State,80,0.800000,0.305560,0.083330,0.430560,-0.494440,0.043620
+R fable ETS MinT shrink,r_ets_mint,reconciled (R fable),Yes,2,State,80,0.800000,0.500000,0.375000,0.583330,-0.300000,0.070800
+R fable ETS OLS,r_ets_ols,reconciled (R fable),Yes,2,State,80,0.800000,0.361110,0.125000,0.500000,-0.438890,0.043420
+R fable ETS WLS struct,r_ets_wls_struct,reconciled (R fable),Yes,2,State,80,0.800000,0.208330,0.000000,0.319440,-0.591670,0.023750
+R fable ETS WLS var,r_ets_wls_var,reconciled (R fable),Yes,2,State,80,0.800000,0.194440,0.000000,0.305560,-0.605560,0.021880
+"SARIMA(1,1,1)(0,1,0)[52]",sarima_111_010,statistical (statsforecast),No,2,State,80,0.800000,0.736110,0.708330,0.791670,-0.063890,0.093890
+"SARIMA(0,1,1)(0,1,1)[52]",sarima_airline,statistical (statsforecast),No,2,State,80,0.800000,0.736110,0.708330,0.791670,-0.063890,0.087520
+Seasonal naive (52 wk),snaive,baseline,No,2,State,80,0.800000,0.583330,0.375000,0.958330,-0.216670,0.281930
+ETS (statsforecast AutoETS),ets,statistical (statsforecast),No,2,State,95,0.950000,0.916670,0.875000,0.958330,-0.033330,0.234510
+LightGBM + conformal,lgbm_conformal,machine learning (LightGBM),No,2,State,95,0.950000,0.972220,0.916670,1.000000,0.022220,0.240720
+LightGBM quantile,lgbm_q,machine learning (LightGBM),No,2,State,95,0.950000,0.861110,0.791670,0.902780,-0.088890,0.151460
+Moving average (4 wk),ma4,baseline,No,2,State,95,0.950000,0.888890,0.875000,0.902780,-0.061110,0.197580
+Naive,naive,baseline,No,2,State,95,0.950000,0.847220,0.750000,0.916670,-0.102780,0.241130
+R fable ARIMA base,r_arima_base,"statistical (R fable, base)",No,2,State,95,0.950000,0.888890,0.875000,0.902780,-0.061110,0.133500
+R fable ARIMA bottom-up,r_arima_bu,reconciled (R fable),Yes,2,State,95,0.950000,0.555560,0.500000,0.625000,-0.394440,0.077390
+R fable ARIMA MinT shrink,r_arima_mint,reconciled (R fable),Yes,2,State,95,0.950000,0.833330,0.791670,0.875000,-0.116670,0.118730
+R fable ARIMA OLS,r_arima_ols,reconciled (R fable),Yes,2,State,95,0.950000,0.652780,0.583330,0.708330,-0.297220,0.082970
+R fable ARIMA WLS struct,r_arima_wls_struct,reconciled (R fable),Yes,2,State,95,0.950000,0.347220,0.291670,0.388890,-0.602780,0.045530
+R fable ARIMA WLS var,r_arima_wls_var,reconciled (R fable),Yes,2,State,95,0.950000,0.333330,0.291670,0.361110,-0.616670,0.040160
+R fable ETS base,r_ets_base,"statistical (R fable, base)",No,2,State,95,0.950000,0.708330,0.625000,0.763890,-0.241670,0.107790
+R fable ETS bottom-up,r_ets_bu,reconciled (R fable),Yes,2,State,95,0.950000,0.500000,0.333330,0.597220,-0.450000,0.066710
+R fable ETS MinT shrink,r_ets_mint,reconciled (R fable),Yes,2,State,95,0.950000,0.680560,0.625000,0.722220,-0.269440,0.108280
+R fable ETS OLS,r_ets_ols,reconciled (R fable),Yes,2,State,95,0.950000,0.486110,0.291670,0.597220,-0.463890,0.066400
+R fable ETS WLS struct,r_ets_wls_struct,reconciled (R fable),Yes,2,State,95,0.950000,0.277780,0.041670,0.402780,-0.672220,0.036330
+R fable ETS WLS var,r_ets_wls_var,reconciled (R fable),Yes,2,State,95,0.950000,0.263890,0.041670,0.388890,-0.686110,0.033460
+"SARIMA(1,1,1)(0,1,0)[52]",sarima_111_010,statistical (statsforecast),No,2,State,95,0.950000,0.902780,0.875000,0.930560,-0.047220,0.143590
+"SARIMA(0,1,1)(0,1,1)[52]",sarima_airline,statistical (statsforecast),No,2,State,95,0.950000,0.902780,0.833330,0.944440,-0.047220,0.133860
+Seasonal naive (52 wk),snaive,baseline,No,2,State,95,0.950000,0.916670,0.875000,1.000000,-0.033330,0.431180
+ETS (statsforecast AutoETS),ets,statistical (statsforecast),No,3,Store,80,0.800000,0.745830,0.666670,0.804170,-0.054170,0.180700
+LightGBM + conformal,lgbm_conformal,machine learning (LightGBM),No,3,Store,80,0.800000,0.737500,0.612500,0.841670,-0.062500,0.128590
+LightGBM quantile,lgbm_q,machine learning (LightGBM),No,3,Store,80,0.800000,0.645830,0.575000,0.716670,-0.154170,0.104420
+Moving average (4 wk),ma4,baseline,No,3,Store,80,0.800000,0.691670,0.587500,0.783330,-0.108330,0.149350
+Naive,naive,baseline,No,3,Store,80,0.800000,0.695830,0.620830,0.762600,-0.104170,0.177720
+R fable ARIMA base,r_arima_base,"statistical (R fable, base)",No,3,Store,80,0.800000,0.720830,0.662400,0.779170,-0.079170,0.115750
+R fable ARIMA bottom-up,r_arima_bu,reconciled (R fable),Yes,3,Store,80,0.800000,0.587500,0.520830,0.666670,-0.212500,0.088430
+R fable ARIMA MinT shrink,r_arima_mint,reconciled (R fable),Yes,3,Store,80,0.800000,0.679170,0.591670,0.758440,-0.120830,0.096000
+R fable ARIMA OLS,r_arima_ols,reconciled (R fable),Yes,3,Store,80,0.800000,0.658330,0.554060,0.741670,-0.141670,0.089140
+R fable ARIMA WLS struct,r_arima_wls_struct,reconciled (R fable),Yes,3,Store,80,0.800000,0.425000,0.354170,0.495830,-0.375000,0.058510
+R fable ARIMA WLS var,r_arima_wls_var,reconciled (R fable),Yes,3,Store,80,0.800000,0.345830,0.287500,0.408330,-0.454170,0.053690
+R fable ETS base,r_ets_base,"statistical (R fable, base)",No,3,Store,80,0.800000,0.608330,0.541670,0.666770,-0.191670,0.097810
+R fable ETS bottom-up,r_ets_bu,reconciled (R fable),Yes,3,Store,80,0.800000,0.525000,0.450000,0.587500,-0.275000,0.077000
+R fable ETS MinT shrink,r_ets_mint,reconciled (R fable),Yes,3,Store,80,0.800000,0.595830,0.525000,0.670830,-0.204170,0.092830
+R fable ETS OLS,r_ets_ols,reconciled (R fable),Yes,3,Store,80,0.800000,0.554170,0.466670,0.616670,-0.245830,0.074020
+R fable ETS WLS struct,r_ets_wls_struct,reconciled (R fable),Yes,3,Store,80,0.800000,0.350000,0.300000,0.408330,-0.450000,0.049330
+R fable ETS WLS var,r_ets_wls_var,reconciled (R fable),Yes,3,Store,80,0.800000,0.333330,0.262500,0.412600,-0.466670,0.046300
+"SARIMA(1,1,1)(0,1,0)[52]",sarima_111_010,statistical (statsforecast),No,3,Store,80,0.800000,0.737500,0.662500,0.816670,-0.062500,0.126240
+"SARIMA(0,1,1)(0,1,1)[52]",sarima_airline,statistical (statsforecast),No,3,Store,80,0.800000,0.745830,0.675000,0.820830,-0.054170,0.114400
+Seasonal naive (52 wk),snaive,baseline,No,3,Store,80,0.800000,0.770830,0.570730,0.929170,-0.029170,0.340910
+ETS (statsforecast AutoETS),ets,statistical (statsforecast),No,3,Store,95,0.950000,0.912500,0.866670,0.950000,-0.037500,0.276350
+LightGBM + conformal,lgbm_conformal,machine learning (LightGBM),No,3,Store,95,0.950000,0.933330,0.862500,0.987500,-0.016670,0.218080
+LightGBM quantile,lgbm_q,machine learning (LightGBM),No,3,Store,95,0.950000,0.891670,0.837500,0.937500,-0.058330,0.184970
+Moving average (4 wk),ma4,baseline,No,3,Store,95,0.950000,0.883330,0.829170,0.937500,-0.066670,0.228420
+Naive,naive,baseline,No,3,Store,95,0.950000,0.858330,0.791670,0.925000,-0.091670,0.271800
+R fable ARIMA base,r_arima_base,"statistical (R fable, base)",No,3,Store,95,0.950000,0.887500,0.833330,0.933330,-0.062500,0.177020
+R fable ARIMA bottom-up,r_arima_bu,reconciled (R fable),Yes,3,Store,95,0.950000,0.787500,0.724900,0.845830,-0.162500,0.135250
+R fable ARIMA MinT shrink,r_arima_mint,reconciled (R fable),Yes,3,Store,95,0.950000,0.862500,0.795830,0.925000,-0.087500,0.146830
+R fable ARIMA OLS,r_arima_ols,reconciled (R fable),Yes,3,Store,95,0.950000,0.825000,0.745830,0.887500,-0.125000,0.136330
+R fable ARIMA WLS struct,r_arima_wls_struct,reconciled (R fable),Yes,3,Store,95,0.950000,0.650000,0.575000,0.716670,-0.300000,0.089490
+R fable ARIMA WLS var,r_arima_wls_var,reconciled (R fable),Yes,3,Store,95,0.950000,0.570830,0.483330,0.662500,-0.379170,0.082110
+R fable ETS base,r_ets_base,"statistical (R fable, base)",No,3,Store,95,0.950000,0.820830,0.758230,0.883330,-0.129170,0.149590
+R fable ETS bottom-up,r_ets_bu,reconciled (R fable),Yes,3,Store,95,0.950000,0.670830,0.587500,0.750000,-0.279170,0.117760
+R fable ETS MinT shrink,r_ets_mint,reconciled (R fable),Yes,3,Store,95,0.950000,0.779170,0.712500,0.850000,-0.170830,0.141980
+R fable ETS OLS,r_ets_ols,reconciled (R fable),Yes,3,Store,95,0.950000,0.720830,0.625000,0.812500,-0.229170,0.113200
+R fable ETS WLS struct,r_ets_wls_struct,reconciled (R fable),Yes,3,Store,95,0.950000,0.529170,0.454170,0.575100,-0.420830,0.075440
+R fable ETS WLS var,r_ets_wls_var,reconciled (R fable),Yes,3,Store,95,0.950000,0.491670,0.416670,0.558330,-0.458330,0.070810
+"SARIMA(1,1,1)(0,1,0)[52]",sarima_111_010,statistical (statsforecast),No,3,Store,95,0.950000,0.908330,0.854170,0.954170,-0.041670,0.193070
+"SARIMA(0,1,1)(0,1,1)[52]",sarima_airline,statistical (statsforecast),No,3,Store,95,0.950000,0.912500,0.841670,0.970830,-0.037500,0.174950
+Seasonal naive (52 wk),snaive,baseline,No,3,Store,95,0.950000,0.891670,0.695730,1.000000,-0.058330,0.521370
+ETS (statsforecast AutoETS),ets,statistical (statsforecast),No,4,Category,80,0.800000,0.750000,0.666670,0.833330,-0.050000,0.178160
+LightGBM + conformal,lgbm_conformal,machine learning (LightGBM),No,4,Category,80,0.800000,0.750000,0.666670,0.833330,-0.050000,0.113390
+LightGBM quantile,lgbm_q,machine learning (LightGBM),No,4,Category,80,0.800000,0.638890,0.541670,0.750000,-0.161110,0.096810
+Moving average (4 wk),ma4,baseline,No,4,Category,80,0.800000,0.694440,0.666670,0.708330,-0.105560,0.140770
+Naive,naive,baseline,No,4,Category,80,0.800000,0.625000,0.541670,0.750000,-0.175000,0.169810
+R fable ARIMA base,r_arima_base,"statistical (R fable, base)",No,4,Category,80,0.800000,0.597220,0.541670,0.708330,-0.202780,0.087100
+R fable ARIMA bottom-up,r_arima_bu,reconciled (R fable),Yes,4,Category,80,0.800000,0.305560,0.208330,0.458330,-0.494440,0.043100
+R fable ARIMA MinT shrink,r_arima_mint,reconciled (R fable),Yes,4,Category,80,0.800000,0.569440,0.458330,0.666670,-0.230560,0.076960
+R fable ARIMA OLS,r_arima_ols,reconciled (R fable),Yes,4,Category,80,0.800000,0.472220,0.291670,0.791670,-0.327780,0.056440
+R fable ARIMA WLS struct,r_arima_wls_struct,reconciled (R fable),Yes,4,Category,80,0.800000,0.263890,0.166670,0.416670,-0.536110,0.028300
+R fable ARIMA WLS var,r_arima_wls_var,reconciled (R fable),Yes,4,Category,80,0.800000,0.180560,0.083330,0.291670,-0.619440,0.022440
+R fable ETS base,r_ets_base,"statistical (R fable, base)",No,4,Category,80,0.800000,0.541670,0.500000,0.583330,-0.258330,0.076510
+R fable ETS bottom-up,r_ets_bu,reconciled (R fable),Yes,4,Category,80,0.800000,0.291670,0.166670,0.500000,-0.508330,0.038380
+R fable ETS MinT shrink,r_ets_mint,reconciled (R fable),Yes,4,Category,80,0.800000,0.500000,0.458330,0.541670,-0.300000,0.076390
+R fable ETS OLS,r_ets_ols,reconciled (R fable),Yes,4,Category,80,0.800000,0.430560,0.166670,0.750000,-0.369440,0.047760
+R fable ETS WLS struct,r_ets_wls_struct,reconciled (R fable),Yes,4,Category,80,0.800000,0.208330,0.125000,0.375000,-0.591670,0.022880
+R fable ETS WLS var,r_ets_wls_var,reconciled (R fable),Yes,4,Category,80,0.800000,0.194440,0.125000,0.333330,-0.605560,0.019160
+"SARIMA(1,1,1)(0,1,0)[52]",sarima_111_010,statistical (statsforecast),No,4,Category,80,0.800000,0.638890,0.583330,0.666670,-0.161110,0.099340
+"SARIMA(0,1,1)(0,1,1)[52]",sarima_airline,statistical (statsforecast),No,4,Category,80,0.800000,0.680560,0.625000,0.750000,-0.119440,0.093850
+Seasonal naive (52 wk),snaive,baseline,No,4,Category,80,0.800000,0.625000,0.458330,0.916670,-0.175000,0.292710
+ETS (statsforecast AutoETS),ets,statistical (statsforecast),No,4,Category,95,0.950000,0.902780,0.875000,0.958330,-0.047220,0.272470
+LightGBM + conformal,lgbm_conformal,machine learning (LightGBM),No,4,Category,95,0.950000,1.000000,1.000000,1.000000,0.050000,0.211440
+LightGBM quantile,lgbm_q,machine learning (LightGBM),No,4,Category,95,0.950000,0.902780,0.833330,0.958330,-0.047220,0.165570
+Moving average (4 wk),ma4,baseline,No,4,Category,95,0.950000,0.861110,0.791670,0.916670,-0.088890,0.215290
+Naive,naive,baseline,No,4,Category,95,0.950000,0.847220,0.791670,0.916670,-0.102780,0.259690
+R fable ARIMA base,r_arima_base,"statistical (R fable, base)",No,4,Category,95,0.950000,0.902780,0.833330,1.000000,-0.047220,0.133200
+R fable ARIMA bottom-up,r_arima_bu,reconciled (R fable),Yes,4,Category,95,0.950000,0.416670,0.375000,0.458330,-0.533330,0.065920
+R fable ARIMA MinT shrink,r_arima_mint,reconciled (R fable),Yes,4,Category,95,0.950000,0.847220,0.791670,0.916670,-0.102780,0.117700
+R fable ARIMA OLS,r_arima_ols,reconciled (R fable),Yes,4,Category,95,0.950000,0.611110,0.416670,0.916670,-0.338890,0.086320
+R fable ARIMA WLS struct,r_arima_wls_struct,reconciled (R fable),Yes,4,Category,95,0.950000,0.333330,0.250000,0.458330,-0.616670,0.043280
+R fable ARIMA WLS var,r_arima_wls_var,reconciled (R fable),Yes,4,Category,95,0.950000,0.263890,0.208330,0.375000,-0.686110,0.034320
+R fable ETS base,r_ets_base,"statistical (R fable, base)",No,4,Category,95,0.950000,0.750000,0.583330,0.875000,-0.200000,0.117020
+R fable ETS bottom-up,r_ets_bu,reconciled (R fable),Yes,4,Category,95,0.950000,0.458330,0.333330,0.666670,-0.491670,0.058700
+R fable ETS MinT shrink,r_ets_mint,reconciled (R fable),Yes,4,Category,95,0.950000,0.763890,0.625000,0.875000,-0.186110,0.116830
+R fable ETS OLS,r_ets_ols,reconciled (R fable),Yes,4,Category,95,0.950000,0.625000,0.291670,0.916670,-0.325000,0.073050
+R fable ETS WLS struct,r_ets_wls_struct,reconciled (R fable),Yes,4,Category,95,0.950000,0.263890,0.125000,0.458330,-0.686110,0.034990
+R fable ETS WLS var,r_ets_wls_var,reconciled (R fable),Yes,4,Category,95,0.950000,0.250000,0.125000,0.458330,-0.700000,0.029300
+"SARIMA(1,1,1)(0,1,0)[52]",sarima_111_010,statistical (statsforecast),No,4,Category,95,0.950000,0.916670,0.916670,0.916670,-0.033330,0.151930
+"SARIMA(0,1,1)(0,1,1)[52]",sarima_airline,statistical (statsforecast),No,4,Category,95,0.950000,0.916670,0.875000,0.958330,-0.033330,0.143530
+Seasonal naive (52 wk),snaive,baseline,No,4,Category,95,0.950000,0.930560,0.791670,1.000000,-0.019440,0.447660
+ETS (statsforecast AutoETS),ets,statistical (statsforecast),No,5,Department,80,0.800000,0.750000,0.601190,0.845240,-0.050000,0.199820
+LightGBM + conformal,lgbm_conformal,machine learning (LightGBM),No,5,Department,80,0.800000,0.773810,0.613090,0.916670,-0.026190,0.170920
+LightGBM quantile,lgbm_q,machine learning (LightGBM),No,5,Department,80,0.800000,0.636910,0.583330,0.684520,-0.163090,0.120130
+Moving average (4 wk),ma4,baseline,No,5,Department,80,0.800000,0.672620,0.607140,0.732140,-0.127380,0.165090
+Naive,naive,baseline,No,5,Department,80,0.800000,0.666670,0.607140,0.726340,-0.133330,0.194690
+R fable ARIMA base,r_arima_base,"statistical (R fable, base)",No,5,Department,80,0.800000,0.666670,0.570680,0.791670,-0.133330,0.131070
+R fable ARIMA bottom-up,r_arima_bu,reconciled (R fable),Yes,5,Department,80,0.800000,0.392860,0.351190,0.428570,-0.407140,0.061950
+R fable ARIMA MinT shrink,r_arima_mint,reconciled (R fable),Yes,5,Department,80,0.800000,0.654760,0.595240,0.702530,-0.145240,0.100200
+R fable ARIMA OLS,r_arima_ols,reconciled (R fable),Yes,5,Department,80,0.800000,0.678570,0.529760,0.821430,-0.121430,0.100980
+R fable ARIMA WLS struct,r_arima_wls_struct,reconciled (R fable),Yes,5,Department,80,0.800000,0.434520,0.309520,0.577380,-0.365480,0.055320
+R fable ARIMA WLS var,r_arima_wls_var,reconciled (R fable),Yes,5,Department,80,0.800000,0.297620,0.244050,0.345240,-0.502380,0.039350
+R fable ETS base,r_ets_base,"statistical (R fable, base)",No,5,Department,80,0.800000,0.571430,0.500000,0.648810,-0.228570,0.095340
+R fable ETS bottom-up,r_ets_bu,reconciled (R fable),Yes,5,Department,80,0.800000,0.321430,0.255950,0.398810,-0.478570,0.054370
+R fable ETS MinT shrink,r_ets_mint,reconciled (R fable),Yes,5,Department,80,0.800000,0.529760,0.464290,0.601190,-0.270240,0.095240
+R fable ETS OLS,r_ets_ols,reconciled (R fable),Yes,5,Department,80,0.800000,0.553570,0.363100,0.761910,-0.246430,0.078090
+R fable ETS WLS struct,r_ets_wls_struct,reconciled (R fable),Yes,5,Department,80,0.800000,0.357140,0.238100,0.511910,-0.442860,0.043250
+R fable ETS WLS var,r_ets_wls_var,reconciled (R fable),Yes,5,Department,80,0.800000,0.226190,0.178420,0.273810,-0.573810,0.032820
+"SARIMA(1,1,1)(0,1,0)[52]",sarima_111_010,statistical (statsforecast),No,5,Department,80,0.800000,0.761910,0.702380,0.815480,-0.038090,0.130030
+"SARIMA(0,1,1)(0,1,1)[52]",sarima_airline,statistical (statsforecast),No,5,Department,80,0.800000,0.755950,0.672620,0.815480,-0.044050,0.120730
+Seasonal naive (52 wk),snaive,baseline,No,5,Department,80,0.800000,0.660710,0.422470,0.821580,-0.139290,0.331870
+ETS (statsforecast AutoETS),ets,statistical (statsforecast),No,5,Department,95,0.950000,0.886910,0.773810,0.958330,-0.063090,0.305590
+LightGBM + conformal,lgbm_conformal,machine learning (LightGBM),No,5,Department,95,0.950000,0.934520,0.863090,0.988090,-0.015480,0.355440
+LightGBM quantile,lgbm_q,machine learning (LightGBM),No,5,Department,95,0.950000,0.869050,0.791670,0.934520,-0.080950,0.202990
+Moving average (4 wk),ma4,baseline,No,5,Department,95,0.950000,0.839290,0.773810,0.886910,-0.110710,0.252480
+Naive,naive,baseline,No,5,Department,95,0.950000,0.869050,0.833330,0.904760,-0.080950,0.297760
+R fable ARIMA base,r_arima_base,"statistical (R fable, base)",No,5,Department,95,0.950000,0.863090,0.797620,0.922620,-0.086910,0.200460
+R fable ARIMA bottom-up,r_arima_bu,reconciled (R fable),Yes,5,Department,95,0.950000,0.535710,0.458330,0.607290,-0.414290,0.094740
+R fable ARIMA MinT shrink,r_arima_mint,reconciled (R fable),Yes,5,Department,95,0.950000,0.845240,0.785710,0.910710,-0.104760,0.153250
+R fable ARIMA OLS,r_arima_ols,reconciled (R fable),Yes,5,Department,95,0.950000,0.827380,0.696430,0.952380,-0.122620,0.154430
+R fable ARIMA WLS struct,r_arima_wls_struct,reconciled (R fable),Yes,5,Department,95,0.950000,0.583330,0.452230,0.720240,-0.366670,0.084600
+R fable ARIMA WLS var,r_arima_wls_var,reconciled (R fable),Yes,5,Department,95,0.950000,0.410710,0.351190,0.458330,-0.539290,0.060180
+R fable ETS base,r_ets_base,"statistical (R fable, base)",No,5,Department,95,0.950000,0.738090,0.660710,0.803570,-0.211910,0.145810
+R fable ETS bottom-up,r_ets_bu,reconciled (R fable),Yes,5,Department,95,0.950000,0.523810,0.416670,0.660710,-0.426190,0.083160
+R fable ETS MinT shrink,r_ets_mint,reconciled (R fable),Yes,5,Department,95,0.950000,0.755950,0.702230,0.815480,-0.194050,0.145650
+R fable ETS OLS,r_ets_ols,reconciled (R fable),Yes,5,Department,95,0.950000,0.708330,0.535710,0.875000,-0.241670,0.119430
+R fable ETS WLS struct,r_ets_wls_struct,reconciled (R fable),Yes,5,Department,95,0.950000,0.482140,0.309520,0.660710,-0.467860,0.066140
+R fable ETS WLS var,r_ets_wls_var,reconciled (R fable),Yes,5,Department,95,0.950000,0.309520,0.250000,0.380950,-0.640480,0.050200
+"SARIMA(1,1,1)(0,1,0)[52]",sarima_111_010,statistical (statsforecast),No,5,Department,95,0.950000,0.904760,0.863090,0.940480,-0.045240,0.198860
+"SARIMA(0,1,1)(0,1,1)[52]",sarima_airline,statistical (statsforecast),No,5,Department,95,0.950000,0.898810,0.851190,0.940480,-0.051190,0.184640
+Seasonal naive (52 wk),snaive,baseline,No,5,Department,95,0.950000,0.886910,0.726040,0.988090,-0.063090,0.507540
+ETS (statsforecast AutoETS),ets,statistical (statsforecast),No,6,State x Category,80,0.800000,0.745370,0.657410,0.828700,-0.054630,0.176800
+LightGBM + conformal,lgbm_conformal,machine learning (LightGBM),No,6,State x Category,80,0.800000,0.787040,0.703700,0.875000,-0.012960,0.138900
+LightGBM quantile,lgbm_q,machine learning (LightGBM),No,6,State x Category,80,0.800000,0.712960,0.666670,0.763890,-0.087040,0.117070
+Moving average (4 wk),ma4,baseline,No,6,State x Category,80,0.800000,0.694440,0.648150,0.740740,-0.105560,0.159250
+Naive,naive,baseline,No,6,State x Category,80,0.800000,0.671300,0.601850,0.745370,-0.128700,0.190320
+R fable ARIMA base,r_arima_base,"statistical (R fable, base)",No,6,State x Category,80,0.800000,0.680560,0.615740,0.745370,-0.119440,0.126310
+R fable ARIMA bottom-up,r_arima_bu,reconciled (R fable),Yes,6,State x Category,80,0.800000,0.476850,0.393520,0.551040,-0.323150,0.073730
+R fable ARIMA MinT shrink,r_arima_mint,reconciled (R fable),Yes,6,State x Category,80,0.800000,0.611110,0.560190,0.662040,-0.188890,0.097980
+R fable ARIMA OLS,r_arima_ols,reconciled (R fable),Yes,6,State x Category,80,0.800000,0.638890,0.537040,0.754630,-0.161110,0.090320
+R fable ARIMA WLS struct,r_arima_wls_struct,reconciled (R fable),Yes,6,State x Category,80,0.800000,0.361110,0.291550,0.444440,-0.438890,0.049470
+R fable ARIMA WLS var,r_arima_wls_var,reconciled (R fable),Yes,6,State x Category,80,0.800000,0.291670,0.240740,0.347220,-0.508330,0.040580
+R fable ETS base,r_ets_base,"statistical (R fable, base)",No,6,State x Category,80,0.800000,0.597220,0.518520,0.675930,-0.202780,0.095960
+R fable ETS bottom-up,r_ets_bu,reconciled (R fable),Yes,6,State x Category,80,0.800000,0.476850,0.375000,0.574190,-0.323150,0.065170
+R fable ETS MinT shrink,r_ets_mint,reconciled (R fable),Yes,6,State x Category,80,0.800000,0.597220,0.532410,0.662040,-0.202780,0.094140
+R fable ETS OLS,r_ets_ols,reconciled (R fable),Yes,6,State x Category,80,0.800000,0.555560,0.407410,0.703820,-0.244440,0.071820
+R fable ETS WLS struct,r_ets_wls_struct,reconciled (R fable),Yes,6,State x Category,80,0.800000,0.337960,0.236110,0.439820,-0.462040,0.039990
+R fable ETS WLS var,r_ets_wls_var,reconciled (R fable),Yes,6,State x Category,80,0.800000,0.263890,0.185180,0.337960,-0.536110,0.034770
+"SARIMA(1,1,1)(0,1,0)[52]",sarima_111_010,statistical (statsforecast),No,6,State x Category,80,0.800000,0.708330,0.634260,0.773150,-0.091670,0.128110
+"SARIMA(0,1,1)(0,1,1)[52]",sarima_airline,statistical (statsforecast),No,6,State x Category,80,0.800000,0.708330,0.648150,0.768520,-0.091670,0.117160
+Seasonal naive (52 wk),snaive,baseline,No,6,State x Category,80,0.800000,0.671300,0.550930,0.791670,-0.128700,0.323740
+ETS (statsforecast AutoETS),ets,statistical (statsforecast),No,6,State x Category,95,0.950000,0.888890,0.824070,0.949070,-0.061110,0.270390
+LightGBM + conformal,lgbm_conformal,machine learning (LightGBM),No,6,State x Category,95,0.950000,0.962960,0.930560,0.995370,0.012960,0.270260
+LightGBM quantile,lgbm_q,machine learning (LightGBM),No,6,State x Category,95,0.950000,0.902780,0.875000,0.935190,-0.047220,0.199180
+Moving average (4 wk),ma4,baseline,No,6,State x Category,95,0.950000,0.870370,0.842590,0.898150,-0.079630,0.243550
+Naive,naive,baseline,No,6,State x Category,95,0.950000,0.870370,0.828700,0.912040,-0.079630,0.291070
+R fable ARIMA base,r_arima_base,"statistical (R fable, base)",No,6,State x Category,95,0.950000,0.875000,0.828700,0.916670,-0.075000,0.193170
+R fable ARIMA bottom-up,r_arima_bu,reconciled (R fable),Yes,6,State x Category,95,0.950000,0.666670,0.597220,0.740740,-0.283330,0.112760
+R fable ARIMA MinT shrink,r_arima_mint,reconciled (R fable),Yes,6,State x Category,95,0.950000,0.814810,0.763890,0.861110,-0.135180,0.149850
+R fable ARIMA OLS,r_arima_ols,reconciled (R fable),Yes,6,State x Category,95,0.950000,0.810190,0.712960,0.898150,-0.139810,0.138140
+R fable ARIMA WLS struct,r_arima_wls_struct,reconciled (R fable),Yes,6,State x Category,95,0.950000,0.509260,0.421300,0.597340,-0.440740,0.075670
+R fable ARIMA WLS var,r_arima_wls_var,reconciled (R fable),Yes,6,State x Category,95,0.950000,0.425930,0.370370,0.481480,-0.524070,0.062060
+R fable ETS base,r_ets_base,"statistical (R fable, base)",No,6,State x Category,95,0.950000,0.796300,0.740620,0.851850,-0.153700,0.146760
+R fable ETS bottom-up,r_ets_bu,reconciled (R fable),Yes,6,State x Category,95,0.950000,0.638890,0.560190,0.726850,-0.311110,0.099680
+R fable ETS MinT shrink,r_ets_mint,reconciled (R fable),Yes,6,State x Category,95,0.950000,0.787040,0.731480,0.842590,-0.162960,0.143970
+R fable ETS OLS,r_ets_ols,reconciled (R fable),Yes,6,State x Category,95,0.950000,0.689810,0.541670,0.828700,-0.260180,0.109840
+R fable ETS WLS struct,r_ets_wls_struct,reconciled (R fable),Yes,6,State x Category,95,0.950000,0.472220,0.347220,0.597220,-0.477780,0.061160
+R fable ETS WLS var,r_ets_wls_var,reconciled (R fable),Yes,6,State x Category,95,0.950000,0.393520,0.300930,0.481600,-0.556480,0.053180
+"SARIMA(1,1,1)(0,1,0)[52]",sarima_111_010,statistical (statsforecast),No,6,State x Category,95,0.950000,0.902780,0.865740,0.944440,-0.047220,0.195920
+"SARIMA(0,1,1)(0,1,1)[52]",sarima_airline,statistical (statsforecast),No,6,State x Category,95,0.950000,0.907410,0.865740,0.949070,-0.042590,0.179180
+Seasonal naive (52 wk),snaive,baseline,No,6,State x Category,95,0.950000,0.949070,0.888890,1.000000,-0.000930,0.495120
+ETS (statsforecast AutoETS),ets,statistical (statsforecast),No,7,State x Department,80,0.800000,0.793650,0.759870,0.827380,-0.006350,0.228540
+LightGBM + conformal,lgbm_conformal,machine learning (LightGBM),No,7,State x Department,80,0.800000,0.767860,0.694440,0.839290,-0.032140,0.194170
+LightGBM quantile,lgbm_q,machine learning (LightGBM),No,7,State x Department,80,0.800000,0.694440,0.660710,0.726190,-0.105560,0.147480
+Moving average (4 wk),ma4,baseline,No,7,State x Department,80,0.800000,0.712300,0.672620,0.748020,-0.087700,0.189040
+Naive,naive,baseline,No,7,State x Department,80,0.800000,0.708330,0.660710,0.755950,-0.091670,0.220950
+R fable ARIMA base,r_arima_base,"statistical (R fable, base)",No,7,State x Department,80,0.800000,0.714290,0.682540,0.744100,-0.085710,0.152520
+R fable ARIMA bottom-up,r_arima_bu,reconciled (R fable),Yes,7,State x Department,80,0.800000,0.561510,0.519840,0.601190,-0.238490,0.105050
+R fable ARIMA MinT shrink,r_arima_mint,reconciled (R fable),Yes,7,State x Department,80,0.800000,0.672620,0.630900,0.712300,-0.127380,0.126800
+R fable ARIMA OLS,r_arima_ols,reconciled (R fable),Yes,7,State x Department,80,0.800000,0.755950,0.682440,0.825400,-0.044050,0.152010
+R fable ARIMA WLS struct,r_arima_wls_struct,reconciled (R fable),Yes,7,State x Department,80,0.800000,0.589290,0.513840,0.666670,-0.210710,0.093760
+R fable ARIMA WLS var,r_arima_wls_var,reconciled (R fable),Yes,7,State x Department,80,0.800000,0.448410,0.406750,0.494050,-0.351590,0.070020
+R fable ETS base,r_ets_base,"statistical (R fable, base)",No,7,State x Department,80,0.800000,0.623020,0.579370,0.666720,-0.176980,0.121410
+R fable ETS bottom-up,r_ets_bu,reconciled (R fable),Yes,7,State x Department,80,0.800000,0.486110,0.440480,0.531750,-0.313890,0.092070
+R fable ETS MinT shrink,r_ets_mint,reconciled (R fable),Yes,7,State x Department,80,0.800000,0.611110,0.573410,0.648810,-0.188890,0.118170
+R fable ETS OLS,r_ets_ols,reconciled (R fable),Yes,7,State x Department,80,0.800000,0.686510,0.589290,0.785710,-0.113490,0.118240
+R fable ETS WLS struct,r_ets_wls_struct,reconciled (R fable),Yes,7,State x Department,80,0.800000,0.501980,0.422570,0.587350,-0.298020,0.075420
+R fable ETS WLS var,r_ets_wls_var,reconciled (R fable),Yes,7,State x Department,80,0.800000,0.349210,0.311460,0.384920,-0.450790,0.059290
+"SARIMA(1,1,1)(0,1,0)[52]",sarima_111_010,statistical (statsforecast),No,7,State x Department,80,0.800000,0.748020,0.706350,0.785710,-0.051980,0.165550
+"SARIMA(0,1,1)(0,1,1)[52]",sarima_airline,statistical (statsforecast),No,7,State x Department,80,0.800000,0.722220,0.684470,0.761910,-0.077780,0.149000
+Seasonal naive (52 wk),snaive,baseline,No,7,State x Department,80,0.800000,0.690480,0.569440,0.789780,-0.109520,0.367550
+ETS (statsforecast AutoETS),ets,statistical (statsforecast),No,7,State x Department,95,0.950000,0.920630,0.902730,0.940480,-0.029360,0.349530
+LightGBM + conformal,lgbm_conformal,machine learning (LightGBM),No,7,State x Department,95,0.950000,0.934520,0.892860,0.972220,-0.015480,0.397330
+LightGBM quantile,lgbm_q,machine learning (LightGBM),No,7,State x Department,95,0.950000,0.875000,0.839240,0.910760,-0.075000,0.246400
+Moving average (4 wk),ma4,baseline,No,7,State x Department,95,0.950000,0.863090,0.829320,0.894840,-0.086910,0.289110
+Naive,naive,baseline,No,7,State x Department,95,0.950000,0.880950,0.841270,0.918650,-0.069050,0.337920
+R fable ARIMA base,r_arima_base,"statistical (R fable, base)",No,7,State x Department,95,0.950000,0.871030,0.837300,0.900840,-0.078970,0.233250
+R fable ARIMA bottom-up,r_arima_bu,reconciled (R fable),Yes,7,State x Department,95,0.950000,0.738090,0.704320,0.773810,-0.211910,0.160660
+R fable ARIMA MinT shrink,r_arima_mint,reconciled (R fable),Yes,7,State x Department,95,0.950000,0.857140,0.821430,0.888940,-0.092860,0.193920
+R fable ARIMA OLS,r_arima_ols,reconciled (R fable),Yes,7,State x Department,95,0.950000,0.894840,0.831350,0.946430,-0.055160,0.232480
+R fable ARIMA WLS struct,r_arima_wls_struct,reconciled (R fable),Yes,7,State x Department,95,0.950000,0.738090,0.672620,0.799650,-0.211910,0.143390
+R fable ARIMA WLS var,r_arima_wls_var,reconciled (R fable),Yes,7,State x Department,95,0.950000,0.601190,0.557490,0.648860,-0.348810,0.107080
+R fable ETS base,r_ets_base,"statistical (R fable, base)",No,7,State x Department,95,0.950000,0.793650,0.747970,0.843250,-0.156350,0.185690
+R fable ETS bottom-up,r_ets_bu,reconciled (R fable),Yes,7,State x Department,95,0.950000,0.690480,0.644840,0.734180,-0.259520,0.140810
+R fable ETS MinT shrink,r_ets_mint,reconciled (R fable),Yes,7,State x Department,95,0.950000,0.777780,0.732090,0.827430,-0.172220,0.180730
+R fable ETS OLS,r_ets_ols,reconciled (R fable),Yes,7,State x Department,95,0.950000,0.835320,0.761910,0.902830,-0.114680,0.180840
+R fable ETS WLS struct,r_ets_wls_struct,reconciled (R fable),Yes,7,State x Department,95,0.950000,0.674600,0.599210,0.755950,-0.275400,0.115340
+R fable ETS WLS var,r_ets_wls_var,reconciled (R fable),Yes,7,State x Department,95,0.950000,0.503970,0.460320,0.543650,-0.446030,0.090680
+"SARIMA(1,1,1)(0,1,0)[52]",sarima_111_010,statistical (statsforecast),No,7,State x Department,95,0.950000,0.922620,0.892860,0.948460,-0.027380,0.253190
+"SARIMA(0,1,1)(0,1,1)[52]",sarima_airline,statistical (statsforecast),No,7,State x Department,95,0.950000,0.898810,0.867060,0.928570,-0.051190,0.227870
+Seasonal naive (52 wk),snaive,baseline,No,7,State x Department,95,0.950000,0.914680,0.821380,0.972220,-0.035320,0.562110
+ETS (statsforecast AutoETS),ets,statistical (statsforecast),No,8,Store x Category,80,0.800000,0.772220,0.738850,0.802780,-0.027780,0.224120
+LightGBM + conformal,lgbm_conformal,machine learning (LightGBM),No,8,Store x Category,80,0.800000,0.773610,0.715240,0.826390,-0.026390,0.167380
+LightGBM quantile,lgbm_q,machine learning (LightGBM),No,8,Store x Category,80,0.800000,0.709720,0.677780,0.743090,-0.090280,0.151300
+Moving average (4 wk),ma4,baseline,No,8,Store x Category,80,0.800000,0.719440,0.680560,0.759720,-0.080560,0.183290
+Naive,naive,baseline,No,8,Store x Category,80,0.800000,0.683330,0.633330,0.738920,-0.116670,0.215730
+R fable ARIMA base,r_arima_base,"statistical (R fable, base)",No,8,Store x Category,80,0.800000,0.679170,0.638890,0.719440,-0.120830,0.146370
+R fable ARIMA bottom-up,r_arima_bu,reconciled (R fable),Yes,8,Store x Category,80,0.800000,0.638890,0.591670,0.687500,-0.161110,0.129010
+R fable ARIMA MinT shrink,r_arima_mint,reconciled (R fable),Yes,8,Store x Category,80,0.800000,0.668060,0.620830,0.712500,-0.131940,0.122460
+R fable ARIMA OLS,r_arima_ols,reconciled (R fable),Yes,8,Store x Category,80,0.800000,0.761110,0.699960,0.825000,-0.038890,0.144380
+R fable ARIMA WLS struct,r_arima_wls_struct,reconciled (R fable),Yes,8,Store x Category,80,0.800000,0.554170,0.502780,0.608330,-0.245830,0.096470
+R fable ARIMA WLS var,r_arima_wls_var,reconciled (R fable),Yes,8,Store x Category,80,0.800000,0.479170,0.429130,0.531980,-0.320830,0.083220
+R fable ETS base,r_ets_base,"statistical (R fable, base)",No,8,Store x Category,80,0.800000,0.636110,0.590280,0.679170,-0.163890,0.128190
+R fable ETS bottom-up,r_ets_bu,reconciled (R fable),Yes,8,Store x Category,80,0.800000,0.598610,0.548610,0.643090,-0.201390,0.114270
+R fable ETS MinT shrink,r_ets_mint,reconciled (R fable),Yes,8,Store x Category,80,0.800000,0.619440,0.576390,0.663890,-0.180560,0.121740
+R fable ETS OLS,r_ets_ols,reconciled (R fable),Yes,8,Store x Category,80,0.800000,0.687500,0.606910,0.766740,-0.112500,0.120670
+R fable ETS WLS struct,r_ets_wls_struct,reconciled (R fable),Yes,8,Store x Category,80,0.800000,0.502780,0.434720,0.569480,-0.297220,0.082690
+R fable ETS WLS var,r_ets_wls_var,reconciled (R fable),Yes,8,Store x Category,80,0.800000,0.422220,0.373610,0.470830,-0.377780,0.073280
+"SARIMA(1,1,1)(0,1,0)[52]",sarima_111_010,statistical (statsforecast),No,8,Store x Category,80,0.800000,0.738890,0.697220,0.779200,-0.061110,0.166790
+"SARIMA(0,1,1)(0,1,1)[52]",sarima_airline,statistical (statsforecast),No,8,Store x Category,80,0.800000,0.752780,0.711110,0.794440,-0.047220,0.149320
+Seasonal naive (52 wk),snaive,baseline,No,8,Store x Category,80,0.800000,0.775000,0.673610,0.868060,-0.025000,0.389860
+ETS (statsforecast AutoETS),ets,statistical (statsforecast),No,8,Store x Category,95,0.950000,0.912500,0.887500,0.937500,-0.037500,0.342760
+LightGBM + conformal,lgbm_conformal,machine learning (LightGBM),No,8,Store x Category,95,0.950000,0.938890,0.902740,0.969440,-0.011110,0.292910
+LightGBM quantile,lgbm_q,machine learning (LightGBM),No,8,Store x Category,95,0.950000,0.919440,0.891670,0.943060,-0.030560,0.249520
+Moving average (4 wk),ma4,baseline,No,8,Store x Category,95,0.950000,0.880560,0.854170,0.906940,-0.069440,0.280320
+Naive,naive,baseline,No,8,Store x Category,95,0.950000,0.872220,0.827740,0.915280,-0.077780,0.329930
+R fable ARIMA base,r_arima_base,"statistical (R fable, base)",No,8,Store x Category,95,0.950000,0.876390,0.841630,0.911110,-0.073610,0.223850
+R fable ARIMA bottom-up,r_arima_bu,reconciled (R fable),Yes,8,Store x Category,95,0.950000,0.844440,0.808330,0.883330,-0.105560,0.197310
+R fable ARIMA MinT shrink,r_arima_mint,reconciled (R fable),Yes,8,Store x Category,95,0.950000,0.848610,0.808330,0.887500,-0.101390,0.187280
+R fable ARIMA OLS,r_arima_ols,reconciled (R fable),Yes,8,Store x Category,95,0.950000,0.900000,0.854130,0.941670,-0.050000,0.220810
+R fable ARIMA WLS struct,r_arima_wls_struct,reconciled (R fable),Yes,8,Store x Category,95,0.950000,0.758330,0.704170,0.808370,-0.191670,0.147530
+R fable ARIMA WLS var,r_arima_wls_var,reconciled (R fable),Yes,8,Store x Category,95,0.950000,0.663890,0.618060,0.709720,-0.286110,0.127270
+R fable ETS base,r_ets_base,"statistical (R fable, base)",No,8,Store x Category,95,0.950000,0.830560,0.797220,0.861110,-0.119440,0.196060
+R fable ETS bottom-up,r_ets_bu,reconciled (R fable),Yes,8,Store x Category,95,0.950000,0.808330,0.762460,0.848610,-0.141670,0.174750
+R fable ETS MinT shrink,r_ets_mint,reconciled (R fable),Yes,8,Store x Category,95,0.950000,0.819440,0.783330,0.850000,-0.130560,0.186190
+R fable ETS OLS,r_ets_ols,reconciled (R fable),Yes,8,Store x Category,95,0.950000,0.847220,0.790280,0.900000,-0.102780,0.184540
+R fable ETS WLS struct,r_ets_wls_struct,reconciled (R fable),Yes,8,Store x Category,95,0.950000,0.694440,0.630560,0.756980,-0.255560,0.126460
+R fable ETS WLS var,r_ets_wls_var,reconciled (R fable),Yes,8,Store x Category,95,0.950000,0.598610,0.548610,0.648650,-0.351390,0.112070
+"SARIMA(1,1,1)(0,1,0)[52]",sarima_111_010,statistical (statsforecast),No,8,Store x Category,95,0.950000,0.913890,0.884720,0.940280,-0.036110,0.255090
+"SARIMA(0,1,1)(0,1,1)[52]",sarima_airline,statistical (statsforecast),No,8,Store x Category,95,0.950000,0.922220,0.895830,0.945870,-0.027780,0.228360
+Seasonal naive (52 wk),snaive,baseline,No,8,Store x Category,95,0.950000,0.918060,0.843060,0.980560,-0.031940,0.596240
+ETS (statsforecast AutoETS),ets,statistical (statsforecast),No,9,Store x Department,80,0.800000,0.767860,0.741670,0.793470,-0.032140,0.268450
+LightGBM + conformal,lgbm_conformal,machine learning (LightGBM),No,9,Store x Department,80,0.800000,0.772620,0.722620,0.822050,-0.027380,0.246670
+LightGBM quantile,lgbm_q,machine learning (LightGBM),No,9,Store x Department,80,0.800000,0.734520,0.711310,0.758330,-0.065480,0.197650
+Moving average (4 wk),ma4,baseline,No,9,Store x Department,80,0.800000,0.705360,0.677380,0.730970,-0.094640,0.218660
+Naive,naive,baseline,No,9,Store x Department,80,0.800000,0.710710,0.676180,0.744050,-0.089290,0.253010
+R fable ARIMA base,r_arima_base,"statistical (R fable, base)",No,9,Store x Department,80,0.800000,0.708330,0.682140,0.735120,-0.091670,0.183390
+R fable ARIMA bottom-up,r_arima_bu,reconciled (R fable),Yes,9,Store x Department,80,0.800000,0.708330,0.682140,0.735120,-0.091670,0.183390
+R fable ARIMA MinT shrink,r_arima_mint,reconciled (R fable),Yes,9,Store x Department,80,0.800000,0.691070,0.662470,0.719640,-0.108930,0.159940
+R fable ARIMA OLS,r_arima_ols,reconciled (R fable),Yes,9,Store x Department,80,0.800000,0.845240,0.810700,0.880360,0.045240,0.236930
+R fable ARIMA WLS struct,r_arima_wls_struct,reconciled (R fable),Yes,9,Store x Department,80,0.800000,0.761910,0.726180,0.798820,-0.038090,0.180980
+R fable ARIMA WLS var,r_arima_wls_var,reconciled (R fable),Yes,9,Store x Department,80,0.800000,0.635710,0.607130,0.664880,-0.164290,0.143230
+R fable ETS base,r_ets_base,"statistical (R fable, base)",No,9,Store x Department,80,0.800000,0.641070,0.612480,0.668450,-0.158930,0.160830
+R fable ETS bottom-up,r_ets_bu,reconciled (R fable),Yes,9,Store x Department,80,0.800000,0.641070,0.612480,0.668450,-0.158930,0.160830
+R fable ETS MinT shrink,r_ets_mint,reconciled (R fable),Yes,9,Store x Department,80,0.800000,0.638090,0.610700,0.666070,-0.161910,0.154870
+R fable ETS OLS,r_ets_ols,reconciled (R fable),Yes,9,Store x Department,80,0.800000,0.806550,0.764880,0.846430,0.006550,0.197480
+R fable ETS WLS struct,r_ets_wls_struct,reconciled (R fable),Yes,9,Store x Department,80,0.800000,0.700590,0.663660,0.738700,-0.099410,0.155430
+R fable ETS WLS var,r_ets_wls_var,reconciled (R fable),Yes,9,Store x Department,80,0.800000,0.557140,0.530950,0.582140,-0.242860,0.125590
+"SARIMA(1,1,1)(0,1,0)[52]",sarima_111_010,statistical (statsforecast),No,9,Store x Department,80,0.800000,0.761310,0.735120,0.786900,-0.038690,0.216060
+"SARIMA(0,1,1)(0,1,1)[52]",sarima_airline,statistical (statsforecast),No,9,Store x Department,80,0.800000,0.748210,0.722020,0.775610,-0.051790,0.194200
+Seasonal naive (52 wk),snaive,baseline,No,9,Store x Department,80,0.800000,0.748210,0.681550,0.810730,-0.051790,0.436090
+ETS (statsforecast AutoETS),ets,statistical (statsforecast),No,9,Store x Department,95,0.950000,0.912500,0.894030,0.932140,-0.037500,0.410560
+LightGBM + conformal,lgbm_conformal,machine learning (LightGBM),No,9,Store x Department,95,0.950000,0.944640,0.922010,0.964290,-0.005360,0.511040
+LightGBM quantile,lgbm_q,machine learning (LightGBM),No,9,Store x Department,95,0.950000,0.900600,0.881550,0.919060,-0.049400,0.320270
+Moving average (4 wk),ma4,baseline,No,9,Store x Department,95,0.950000,0.869050,0.848810,0.889290,-0.080950,0.334410
+Naive,naive,baseline,No,9,Store x Department,95,0.950000,0.885710,0.857740,0.909520,-0.064290,0.386940
+R fable ARIMA base,r_arima_base,"statistical (R fable, base)",No,9,Store x Department,95,0.950000,0.874400,0.850580,0.898210,-0.075590,0.280470
+R fable ARIMA bottom-up,r_arima_bu,reconciled (R fable),Yes,9,Store x Department,95,0.950000,0.874400,0.850580,0.898210,-0.075590,0.280470
+R fable ARIMA MinT shrink,r_arima_mint,reconciled (R fable),Yes,9,Store x Department,95,0.950000,0.854760,0.829150,0.879780,-0.095240,0.244610
+R fable ARIMA OLS,r_arima_ols,reconciled (R fable),Yes,9,Store x Department,95,0.950000,0.943450,0.919630,0.965490,-0.006550,0.362350
+R fable ARIMA WLS struct,r_arima_wls_struct,reconciled (R fable),Yes,9,Store x Department,95,0.950000,0.906550,0.879170,0.932140,-0.043450,0.276790
+R fable ARIMA WLS var,r_arima_wls_var,reconciled (R fable),Yes,9,Store x Department,95,0.950000,0.801790,0.774390,0.828570,-0.148210,0.219050
+R fable ETS base,r_ets_base,"statistical (R fable, base)",No,9,Store x Department,95,0.950000,0.829170,0.804150,0.854760,-0.120830,0.245970
+R fable ETS bottom-up,r_ets_bu,reconciled (R fable),Yes,9,Store x Department,95,0.950000,0.829170,0.804150,0.854760,-0.120830,0.245970
+R fable ETS MinT shrink,r_ets_mint,reconciled (R fable),Yes,9,Store x Department,95,0.950000,0.817860,0.794640,0.841070,-0.132140,0.236850
+R fable ETS OLS,r_ets_ols,reconciled (R fable),Yes,9,Store x Department,95,0.950000,0.918450,0.892840,0.942870,-0.031550,0.302020
+R fable ETS WLS struct,r_ets_wls_struct,reconciled (R fable),Yes,9,Store x Department,95,0.950000,0.863090,0.834520,0.891670,-0.086910,0.237700
+R fable ETS WLS var,r_ets_wls_var,reconciled (R fable),Yes,9,Store x Department,95,0.950000,0.745240,0.719030,0.770250,-0.204760,0.192070
+"SARIMA(1,1,1)(0,1,0)[52]",sarima_111_010,statistical (statsforecast),No,9,Store x Department,95,0.950000,0.911310,0.891060,0.930360,-0.038690,0.330430
+"SARIMA(0,1,1)(0,1,1)[52]",sarima_airline,statistical (statsforecast),No,9,Store x Department,95,0.950000,0.902980,0.880360,0.925020,-0.047020,0.296920
+Seasonal naive (52 wk),snaive,baseline,No,9,Store x Department,95,0.950000,0.906550,0.855340,0.950610,-0.043450,0.665490

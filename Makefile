@@ -2,7 +2,7 @@
 PY      ?= .venv/bin/python
 HF      ?= .venv/bin/hier-forecast
 
-.PHONY: setup data sql backtest r evaluate export figures report test lint all determinism clean
+.PHONY: setup data sql backtest r evaluate export tableau-web figures report test lint all determinism clean
 
 setup:            ## create venv and install pinned deps + package
 	uv venv --python 3.11 .venv || python3.11 -m venv .venv
@@ -27,6 +27,9 @@ evaluate:         ## one metric code path over every model; Python reconciliatio
 export:           ## Tableau CSVs in tableau/data/
 	$(HF) export
 
+tableau-web:      ## 5 flattened CSVs for Tableau Public web authoring in tableau/web/ (from tableau/data/)
+	$(PY) scripts/build_tableau_web.py
+
 figures:
 	$(HF) figures
 
@@ -44,7 +47,7 @@ test: lint        ## lint + pytest (committed fixture; no raw data needed)
 determinism:      ## run sql + backtest + evaluate + export twice and compare SHA-256 of every output
 	$(PY) scripts/check_determinism.py
 
-all: data sql backtest r evaluate export figures report test
+all: data sql backtest r evaluate export tableau-web figures report test
 
 clean:
 	rm -rf data/processed reports/*_files
