@@ -6,7 +6,26 @@ produce probabilistic revenue forecasts across US Walmart stores and departments
 Audience: a retail planning lead who must decide which forecast to trust at which level (total, state, store, department) and how much
 buffer to plan around it. Data: M5 Walmart weekly revenue, 2011-01-29 to 2016-05-20, 10 stores in CA, TX, WI. Every file in
 `tableau/data/` is a derived aggregate; no raw M5 file is used. Tableau Public limits: all CSVs together are far below 100 MB; do not use
-live connections; connect to the CSVs as extracts. Published URL placeholder: `TABLEAU_PUBLIC_URL_TODO`.
+live connections; connect to the CSVs as extracts. Published at https://public.tableau.com/app/profile/abhishek.thakur1845/viz/HierarchicalRevenueForecastingM5/M5ForecastDashboard (see the next section for what was actually built).
+
+## Published version (what was actually built)
+
+The dashboard is published at https://public.tableau.com/app/profile/abhishek.thakur1845/viz/HierarchicalRevenueForecastingM5/M5ForecastDashboard.
+
+The published version is a leaner, single dashboard with 5 sheets, built in Tableau Public web authoring from the five flattened CSVs in
+`tableau/web/` (see `tableau/web/README.md`). The sheets are:
+
+1. WAPE heat map by model and hierarchy level (`scorecard.csv`).
+2. WAPE ratio vs seasonal naive (`scorecard.csv`).
+3. Forecast vs actual, with the default view set to Total, LightGBM quantile and horizon 1 week (`forecast_explorer.csv`).
+4. Interval coverage vs the nominal 80% (`calibration.csv`).
+5. Reconciliation impact, WAPE ratio vs the unreconciled base (`reconciliation.csv`).
+
+No calculated fields were built in Tableau, because every value (rates as fractions, ranks, ratios, Yes/No flags, buffers) is pre-calculated by
+`scripts/build_tableau_web.py`. `planning_buffer.csv` is available for a planning sheet but is not a sheet on the published dashboard.
+
+The fuller 5-dashboard design below (data model with relationships, parameters, calculated fields, executive scorecard, forecast explorer,
+reconciliation impact, calibration and planning takeaways) remains in this file as design intent and was not built as written.
 
 No emojis and no em dashes anywhere in titles, captions or tooltips.
 
@@ -142,4 +161,4 @@ Banner (always visible, bold): "All cost figures use ASSUMED parameters (gross m
 1. Create extracts, check that every worksheet filter uses the `split` parameter default `test`.
 2. Add the data-source caption on every dashboard: "Source: M5 Forecasting (Walmart), derived aggregates only. Forecasts are backtests, not live predictions."
 3. Hide unused fields; rename `*_usd` fields to readable names; set number formats ($#,##0 for revenue, 0.0% for WAPE).
-4. Publish to Tableau Public, copy the URL into the README in place of `TABLEAU_PUBLIC_URL_TODO`.
+4. Publish to Tableau Public. Done for the lean version: the URL is in the README and at the top of this file.

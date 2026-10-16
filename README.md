@@ -5,7 +5,7 @@ total-revenue WAPE (2.6%, versus 5.0% for a 4-week moving average and 14.0% for 
 at 8 of the other 8 hierarchy levels in WAPE (3.2% to 6.3%), a plain 4-week moving average beats statsforecast ETS in WAPE at all 9 levels, and the
 fable ARIMA intervals after bottom-up, OLS or WLS reconciliation under-cover badly (80% intervals cover 17% to 29% of actuals at the Total level).
 
-Tableau dashboard: TABLEAU_PUBLIC_URL_TODO (built from `tableau/data/` following `tableau/DASHBOARD_SPEC.md`).
+Tableau dashboard: [Hierarchical Revenue Forecasting, M5](https://public.tableau.com/app/profile/abhishek.thakur1845/viz/HierarchicalRevenueForecastingM5/M5ForecastDashboard) (a 5-sheet dashboard built from the flattened CSVs in `tableau/web/`; the fuller design is in `tableau/DASHBOARD_SPEC.md`).
 
 ## Business question
 

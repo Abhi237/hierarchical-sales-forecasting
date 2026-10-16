@@ -68,9 +68,15 @@ def test_r_script_parses():
     assert res.returncode == 0, res.stderr
 
 
-def test_readme_mentions_tableau_placeholder_and_licence():
+TABLEAU_URL = "https://public.tableau.com/app/profile/abhishek.thakur1845/viz/HierarchicalRevenueForecastingM5/M5ForecastDashboard"
+
+
+def test_readme_links_published_tableau_dashboard_and_mentions_licence():
     txt = (ROOT / "README.md").read_text()
-    assert "TABLEAU_PUBLIC_URL_TODO" in txt
+    assert f"]({TABLEAU_URL})" in txt
+    assert "TABLEAU_PUBLIC_URL_TODO" not in txt
+    spec = (ROOT / "tableau" / "DASHBOARD_SPEC.md").read_text()
+    assert TABLEAU_URL in spec and "TABLEAU_PUBLIC_URL_TODO" not in spec
     assert "licence" in txt.lower() or "license" in txt.lower()
 
 
