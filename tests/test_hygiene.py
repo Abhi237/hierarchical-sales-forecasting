@@ -68,7 +68,7 @@ def test_r_script_parses():
     assert res.returncode == 0, res.stderr
 
 
-TABLEAU_URL = "https://public.tableau.com/app/profile/abhishek.thakur1845/viz/HierarchicalRevenueForecastingM5/M5ForecastDashboard"
+TABLEAU_URL = "https://public.tableau.com/app/profile/abhishek.thakur1845/viz/HierarchicalRevenueForecastingM5/M5ForecastStory"
 
 
 def test_readme_links_published_tableau_dashboard_and_mentions_licence():
@@ -77,6 +77,9 @@ def test_readme_links_published_tableau_dashboard_and_mentions_licence():
     assert "TABLEAU_PUBLIC_URL_TODO" not in txt
     spec = (ROOT / "tableau" / "DASHBOARD_SPEC.md").read_text()
     assert TABLEAU_URL in spec and "TABLEAU_PUBLIC_URL_TODO" not in spec
+    for path in ("README.md", "tableau/DASHBOARD_SPEC.md", "tableau/web/README.md", "scripts/build_readme.py"):
+        assert "M5ForecastDashboard" not in (ROOT / path).read_text(), path   # the old URL is dead
+    assert "typed into Tableau text boxes by hand" in txt and "typed into Tableau text boxes by hand" in spec
     assert "licence" in txt.lower() or "license" in txt.lower()
 
 

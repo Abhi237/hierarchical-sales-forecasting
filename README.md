@@ -5,7 +5,7 @@ total-revenue WAPE (2.6%, versus 5.0% for a 4-week moving average and 14.0% for 
 at 8 of the other 8 hierarchy levels in WAPE (3.2% to 6.3%), a plain 4-week moving average beats statsforecast ETS in WAPE at all 9 levels, and the
 fable ARIMA intervals after bottom-up, OLS or WLS reconciliation under-cover badly (80% intervals cover 17% to 29% of actuals at the Total level).
 
-Tableau dashboard: [Hierarchical Revenue Forecasting, M5](https://public.tableau.com/app/profile/abhishek.thakur1845/viz/HierarchicalRevenueForecastingM5/M5ForecastDashboard) (a 5-sheet dashboard built from the flattened CSVs in `tableau/web/`; the fuller design is in `tableau/DASHBOARD_SPEC.md`).
+Tableau dashboard: [Hierarchical Revenue Forecasting, M5 (story page)](https://public.tableau.com/app/profile/abhishek.thakur1845/viz/HierarchicalRevenueForecastingM5/M5ForecastStory). One scrolling page that answers: which forecast should a planning manager trust, and how much safety stock does it justify? See the Tableau dashboard section below.
 
 ## Business question
 
@@ -211,6 +211,13 @@ LightGBM improves at the top (bottom-up 0.85 and MinT 0.89 at Total) with almost
   (57% to 71% at 80%, 82% to 88% at 95%) and sits below the unreconciled ARIMA base at most levels below Total. Do not use those reconciled intervals for planning at upper levels.
 * **Residuals:** the Ljung-Box test (lag 52, fit at the last test origin) rejects whiteness at 70% to 100% of ARIMA nodes by level and 33% to 100% of ETS nodes, so residual autocorrelation remains and the Gaussian intervals are
   mis-specified; with 277 weekly points and lag 52 the test is also demanding.
+
+## Tableau dashboard
+
+Published at [https://public.tableau.com/app/profile/abhishek.thakur1845/viz/HierarchicalRevenueForecastingM5/M5ForecastStory](https://public.tableau.com/app/profile/abhishek.thakur1845/viz/HierarchicalRevenueForecastingM5/M5ForecastStory). It is a single scrolling story page with a headline question, 7 headline numbers (`tableau/web/kpis.csv`), chart sheets built from
+`tableau/web/*.csv` (winner by level, WAPE heat map, moving average vs ETS, forecast vs actual with 80% bounds, reconciliation by level, interval coverage), and a recommendations
+section whose cost figures are labelled ASSUMED. The finding headlines were generated from `tableau/web/findings.csv` and **typed into Tableau text boxes by hand**, so if the
+pipeline or its numbers change, the text boxes must be updated by hand. The fuller design in `tableau/DASHBOARD_SPEC.md` is design intent, not what was built.
 
 ## Planning use (ASSUMED parameters)
 
