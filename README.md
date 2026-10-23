@@ -219,6 +219,29 @@ Published at [https://public.tableau.com/app/profile/abhishek.thakur1845/viz/Hie
 section whose cost figures are labelled ASSUMED. The finding headlines were generated from `tableau/web/findings.csv` and **typed into Tableau text boxes by hand**, so if the
 pipeline or its numbers change, the text boxes must be updated by hand. The fuller design in `tableau/DASHBOARD_SPEC.md` is design intent, not what was built.
 
+### Plain-language Overview (for non-technical analysts)
+
+The dashboard redesign adds an Overview tab in business language, fed by three CSVs that `scripts/build_tableau_overview.py` derives from the
+existing `tableau/web` exports (no new modelling): `overview_kpis.csv` (4 headline numbers with one-line captions), `accuracy_by_area.csv` (accuracy =
+100 minus WAPE, default model vs seasonal naive, per hierarchy level) and `forecast_plain.csv` (forecast vs actual with the likely range, default model,
+14 areas, horizons 1 and 4). The default model is R fable ARIMA reconciled with MinT shrink. The technical charts move to a Methodology tab.
+
+### Plain glossary
+
+| Technical term | Plain term used on the Overview |
+|---|---|
+| WAPE (weighted absolute percentage error) | Forecast error (share of actual revenue missed) |
+| 100 minus WAPE | Forecast accuracy |
+| Seasonal naive (52 wk) | Last year's pattern (repeat the same week last year) |
+| R fable ARIMA MinT shrink (default model) | Our forecast |
+| 80% prediction interval (lo80 to hi80) | Likely range |
+| Interval coverage (in_80) | Weeks actual revenue landed in the likely range |
+| Horizon (weeks) | Weeks ahead |
+| Hierarchy level (Total, State, Store, Category, Dept and crosses) | Area (Company total, By state, By store, By category, By department, ...) |
+| Node | A single area, such as one store or one state |
+| Reconciliation (MinT shrink) | Making store, state and company forecasts add up consistently |
+| Test origin | A point in time a forecast was made from |
+
 ## Planning use (ASSUMED parameters)
 
 `tableau/data/decision_planning.csv` and `decision_sensitivity.csv` compare planning at the point forecast with planning at the 90th percentile forecast (ASSUMED service level)

@@ -29,6 +29,7 @@ export:           ## Tableau CSVs in tableau/data/
 
 tableau-web:      ## 7 flattened CSVs for Tableau Public web authoring in tableau/web/ (from tableau/data/)
 	$(PY) scripts/build_tableau_web.py
+	$(PY) scripts/build_tableau_overview.py
 
 figures:
 	$(HF) figures

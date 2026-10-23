@@ -1,0 +1,19 @@
+area_order,area,series,accuracy_pct
+1,Company total,Our forecast,97.3
+1,Company total,Last year's pattern,86.0
+2,By state,Our forecast,96.8
+2,By state,Last year's pattern,86.0
+3,By store,Our forecast,96.0
+3,By store,Last year's pattern,85.8
+4,By category,Our forecast,96.7
+4,By category,Last year's pattern,86.0
+5,By department,Our forecast,96.0
+5,By department,Last year's pattern,85.7
+6,By state and category,Our forecast,96.0
+6,By state and category,Last year's pattern,85.7
+7,By state and department,Our forecast,95.2
+7,By state and department,Last year's pattern,85.3
+8,By store and category,Our forecast,94.8
+8,By store and category,Last year's pattern,85.0
+9,By store and department,Our forecast,93.7
+9,By store and department,Last year's pattern,83.8

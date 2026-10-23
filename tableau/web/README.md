@@ -55,3 +55,15 @@ target at Total (from 24 forecasts, noisy); MinT shrink WAPE ratio vs the ARIMA 
 
 **findings.csv** `finding_order, section` (2 to 6)`, section_name, finding_type` (headline, callout or recommendation)`, finding_headline, finding_detail, model_label, level_name,
 is_assumed` (Yes only for the row that quotes cost figures, whose headline starts with ASSUMED)`, evidence_file` (the export the numbers come from).
+
+## Plain-language Overview sources
+
+Three more CSVs feed the Overview tab for non-technical analysts. They are derived by `scripts/build_tableau_overview.py` (run by `make tableau-web`
+after the seven files above) from `kpis.csv`, `scorecard.csv` and `forecast_explorer.csv`; nothing is typed. The default model is R fable ARIMA MinT shrink.
+The plain glossary (technical term to plain term) is in the main README, section Tableau dashboard.
+
+| file | rows | grain | columns |
+|---|---|---|---|
+| `overview_kpis.csv` | 4 | one headline number per row | `order, label, value_display, caption` (formatted text, ready for text tiles) |
+| `accuracy_by_area.csv` | 18 | level x series | `area_order` (1-9, for sorting), `area` (plain level name), `series` (Our forecast or Last year's pattern), `accuracy_pct` (100 minus WAPE, in percent, not a fraction) |
+| `forecast_plain.csv` | 168 | area x horizon (1, 4) x week | `week, area, horizon_weeks, actual_revenue, forecast_revenue, range_low, range_high` (80% band, USD), `inside_range` (Yes/No) |
