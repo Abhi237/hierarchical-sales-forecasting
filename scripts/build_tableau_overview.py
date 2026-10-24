@@ -1,6 +1,7 @@
 """Build the plain-language Overview sources for the Tableau dashboard (tableau/web/overview_*.csv).
 
-Every value is derived from the existing tableau/web exports (scorecard.csv, kpis.csv, forecast_explorer.csv);
+Every value is derived from the existing tableau/web exports (scorecard.csv, kpis.csv, forecast_explorer.csv).
+All cards use the default model (R fable ARIMA MinT shrink), the same as accuracy_by_area.csv and forecast_plain.csv;
 nothing is modelled or typed here. Run after scripts/build_tableau_web.py (`make tableau-web`).
 """
 from __future__ import annotations
@@ -43,14 +44,16 @@ def node_area(level_name: str, node_label: str) -> str:
 def build_kpis(web: pathlib.Path) -> pd.DataFrame:
     k = pd.read_csv(web / "kpis.csv").set_index("kpi_order")
     fx = pd.read_csv(web / "forecast_explorer.csv")
-    best_wape = float(k.loc[1, "kpi_value"])
-    cut = float(k.loc[2, "kpi_value"])
+    sc = pd.read_csv(web / "scorecard.csv")
+    tot = sc[sc.level_name == "Total"].set_index("model_label").wape_pct
+    best_wape = float(tot[DEFAULT_MODEL])
+    cut = 1 - best_wape / float(tot[BASELINE_MODEL])
     stores = k.loc[4, "kpi_display"]
     t = fx[(fx.model_label == DEFAULT_MODEL) & (fx.level_name == "Total") & (fx.horizon_weeks == 1)]
     inside, weeks = int(t.in_80.sum()), len(t)
     rows = [
         ("Forecast accuracy at company level", f"{100 * (1 - best_wape):.1f}%",
-         f"Our best company-wide forecast missed actual weekly revenue by {100 * best_wape:.1f}% on average, "
+         f"Our company-wide forecast missed actual weekly revenue by {100 * best_wape:.1f}% on average, "
          "looking up to 4 weeks ahead."),
         ("More accurate than last year's pattern", f"{100 * cut:.1f}%",
          f"Our company-wide forecast errors are {100 * cut:.1f}% smaller than simply repeating last year's sales."),

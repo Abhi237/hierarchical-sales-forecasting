@@ -32,8 +32,13 @@ def test_overview_kpis(out):
     assert list(k.columns) == ["order", "label", "value_display", "caption"]
     assert k.order.tolist() == [1, 2, 3, 4]
     src = pd.read_csv(WEB / "kpis.csv").set_index("kpi_order")
-    assert k.value_display[0] == f"{100 * (1 - src.loc[1, 'kpi_value']):.1f}%"
-    assert k.value_display[1] == f"{100 * src.loc[2, 'kpi_value']:.1f}%"
+    tot = pd.read_csv(WEB / "scorecard.csv").query("level_name == 'Total'").set_index("model_label").wape_pct
+    w, w_sn = tot[bto.DEFAULT_MODEL], tot[bto.BASELINE_MODEL]
+    assert k.value_display[0] == f"{100 * (1 - w):.1f}%"
+    assert k.value_display[1] == f"{100 * (1 - w / w_sn):.1f}%"
+    acc = pd.read_csv(WEB / "accuracy_by_area.csv")
+    company = acc[(acc.area == "Company total") & (acc.series == bto.OUR)].accuracy_pct.iloc[0]
+    assert k.value_display[0] == f"{company:.1f}%"
     assert k.value_display[3] == src.loc[4, "kpi_display"]
     fx = pd.read_csv(WEB / "forecast_explorer.csv")
     t = fx[(fx.model_label == bto.DEFAULT_MODEL) & (fx.level_name == "Total") & (fx.horizon_weeks == 1)]
