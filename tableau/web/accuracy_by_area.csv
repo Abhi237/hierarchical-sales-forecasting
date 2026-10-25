@@ -1,19 +1,15 @@
-area_order,area,series,accuracy_pct
-1,Company total,Our forecast,97.3
-1,Company total,Last year's pattern,86.0
-2,By state,Our forecast,96.8
-2,By state,Last year's pattern,86.0
-3,By store,Our forecast,96.0
-3,By store,Last year's pattern,85.8
-4,By category,Our forecast,96.7
-4,By category,Last year's pattern,86.0
-5,By department,Our forecast,96.0
-5,By department,Last year's pattern,85.7
-6,By state and category,Our forecast,96.0
-6,By state and category,Last year's pattern,85.7
-7,By state and department,Our forecast,95.2
-7,By state and department,Last year's pattern,85.3
-8,By store and category,Our forecast,94.8
-8,By store and category,Last year's pattern,85.0
-9,By store and department,Our forecast,93.7
-9,By store and department,Last year's pattern,83.8
+level_order,Level,State,Store,Accuracy (%),Last year's pattern accuracy (%)
+1,Company,All states,All stores,97.3,86.0
+2,State,California,All stores,97.4,84.6
+2,State,Texas,All stores,96.6,91.5
+2,State,Wisconsin,All stores,96.0,82.7
+3,Store,California,CA_1,97.5,94.3
+3,Store,California,CA_2,93.5,57.3
+3,Store,California,CA_3,97.3,93.7
+3,Store,California,CA_4,95.9,90.4
+3,Store,Texas,TX_1,96.5,94.9
+3,Store,Texas,TX_2,96.1,89.6
+3,Store,Texas,TX_3,96.2,90.4
+3,Store,Wisconsin,WI_1,97.2,90.4
+3,Store,Wisconsin,WI_2,94.0,78.0
+3,Store,Wisconsin,WI_3,95.7,80.9

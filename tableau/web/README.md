@@ -58,12 +58,18 @@ is_assumed` (Yes only for the row that quotes cost figures, whose headline start
 
 ## Plain-language Overview sources
 
-Three more CSVs feed the Overview tab for non-technical analysts. They are derived by `scripts/build_tableau_overview.py` (run by `make tableau-web`
-after the seven files above) from `kpis.csv`, `scorecard.csv` and `forecast_explorer.csv`; nothing is typed. The default model is R fable ARIMA MinT shrink.
+Four CSVs feed the Overview story (4 story points) for non-technical analysts. `scripts/build_tableau_overview.py` (run by `make tableau-web` after the
+seven files above) derives them from `kpis.csv`, `scorecard.csv`, `forecast_explorer.csv` and `tableau/data/forecast_vs_actual.csv`; nothing is typed.
+All use the default model, R fable ARIMA MinT shrink. Accuracy is 100 minus WAPE, pooled over horizons 1 to 4 and the 6 test origins (24 tested weeks).
 The plain glossary (technical term to plain term) is in the main README, section Tableau dashboard.
 
 | file | rows | grain | columns |
 |---|---|---|---|
-| `overview_kpis.csv` | 4 | one headline number per row | `order, label, value_display, caption` (formatted text, ready for text tiles) |
-| `accuracy_by_area.csv` | 18 | level x series | `area_order` (1-9, for sorting), `area` (plain level name), `series` (Our forecast or Last year's pattern), `accuracy_pct` (100 minus WAPE, in percent, not a fraction) |
-| `forecast_plain.csv` | 168 | area x horizon (1, 4) x week | `week, area, horizon_weeks, actual_revenue, forecast_revenue, range_low, range_high` (80% band, USD), `inside_range` (Yes/No) |
+| `overview_kpis.csv` | 4 | one headline number per row | `order, label, value_display, caption` |
+| `accuracy_by_area.csv` | 14 | company, 3 states, 10 stores | `level_order` (1 company, 2 state, 3 store), `Level` (Company, State, Store), `State` (California, Texas, Wisconsin or All states), `Store` (CA_1 ... WI_3 or All stores), `Accuracy (%)`, `Last year's pattern accuracy (%)` |
+| `forecast_plain.csv` | 336 | area x week (24 weeks) | `Week, Level, State, Store, Weeks ahead` (1-4), `Forecast made after, Actual weekly revenue, Forecast weekly revenue, Likely range low, Likely range high` (80% band, USD), `Inside likely range` (Yes/No) |
+| `story_headlines.csv` | 4 | one story point per row | `story_point, title, headline, source_numbers` (the computed numbers behind the headline), `source_file` |
+
+Filtering: each area has exactly one row per week (the 6 origins x 4 weeks ahead tile the 24 test weeks), so Week, State and Store filters never double count.
+To show state totals use `Level = State`; to show stores within a state use `Level = Store` and filter `State`. Do not sum across Levels.
+There are no forecasts beyond the last tested week (2016-05-14): "Next 4 weeks outlook" describes the latest tested 4-week block, not the future.

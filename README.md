@@ -223,8 +223,9 @@ pipeline or its numbers change, the text boxes must be updated by hand. The full
 
 The dashboard redesign adds an Overview tab in business language, fed by three CSVs that `scripts/build_tableau_overview.py` derives from the
 existing `tableau/web` exports (no new modelling): `overview_kpis.csv` (4 headline numbers with one-line captions), `accuracy_by_area.csv` (accuracy =
-100 minus WAPE, default model vs seasonal naive, per hierarchy level) and `forecast_plain.csv` (forecast vs actual with the likely range, default model,
-14 areas, horizons 1 and 4). The default model is R fable ARIMA reconciled with MinT shrink. The technical charts move to a Methodology tab.
+100 minus WAPE for the company, each state and each store, default model vs seasonal naive), `forecast_plain.csv` (weekly forecast vs actual with the
+likely range for the company, 3 states and 10 stores, 1 to 4 weeks ahead, with separate State and Store columns) and `story_headlines.csv` (one computed
+headline per story point). Inputs are `tableau/web` and `tableau/data/forecast_vs_actual.csv`. The default model is R fable ARIMA reconciled with MinT shrink. The technical charts move to a Methodology tab.
 
 ### Plain glossary
 
