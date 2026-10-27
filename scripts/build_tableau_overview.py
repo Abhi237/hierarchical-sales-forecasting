@@ -127,7 +127,7 @@ def build_kpi_strip(data: pathlib.Path) -> pd.DataFrame:
     """Filterable KPI strip: one row per Level/State/Store x Weeks ahead (All, 1, 2, 3, 4)."""
     f = geo_forecasts(data)
     areas = [("Company", ALL_STATES, ALL_STORES)]
-    for code, name in STATE_NAMES.items():
+    for _code, name in STATE_NAMES.items():
         areas.append(("State", name, ALL_STORES))
     for code, name in STATE_NAMES.items():
         for n in sorted(f[(f.level_name == "Store") & (f.node_label.str.startswith(code + "_"))].node_label.unique()):
