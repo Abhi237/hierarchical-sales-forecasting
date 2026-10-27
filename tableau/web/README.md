@@ -58,18 +58,24 @@ is_assumed` (Yes only for the row that quotes cost figures, whose headline start
 
 ## Plain-language Overview sources
 
-Four CSVs feed the Overview story (4 story points) for non-technical analysts. `scripts/build_tableau_overview.py` (run by `make tableau-web` after the
-seven files above) derives them from `kpis.csv`, `scorecard.csv`, `forecast_explorer.csv` and `tableau/data/forecast_vs_actual.csv`; nothing is typed.
-All use the default model, R fable ARIMA MinT shrink. Accuracy is 100 minus WAPE, pooled over horizons 1 to 4 and the 6 test origins (24 tested weeks).
-The plain glossary (technical term to plain term) is in the main README, section Tableau dashboard.
+Nine CSVs feed the Overview story for non-technical analysts. `scripts/build_tableau_overview.py` (run by `make tableau-web`)
+derives them from `tableau/data/forecast_vs_actual.csv`, `calendar_weeks.csv`, `origins_design.csv` and the existing web
+scorecard/kpis; nothing is typed. Default forecast = R fable ARIMA MinT shrink. Accuracy = 100 minus WAPE
+(sum of absolute errors / sum of actual revenue; see `src/hier_forecast/metrics.py`). Likely range = 80% prediction
+interval (10th to 90th percentile). Variance sign = forecast minus actual (positive = over-forecast).
 
-| file | rows | grain | columns |
+| file | rows | grain | purpose |
 |---|---|---|---|
-| `overview_kpis.csv` | 4 | one headline number per row | `order, label, value_display, caption` |
-| `accuracy_by_area.csv` | 14 | company, 3 states, 10 stores | `level_order` (1 company, 2 state, 3 store), `Level` (Company, State, Store), `State` (California, Texas, Wisconsin or All states), `Store` (CA_1 ... WI_3 or All stores), `Accuracy (%)`, `Last year's pattern accuracy (%)` |
-| `forecast_plain.csv` | 336 | area x week (24 weeks) | `Week, Level, State, Store, Weeks ahead` (1-4), `Forecast made after, Actual weekly revenue, Forecast weekly revenue, Likely range low, Likely range high` (80% band, USD), `Inside likely range` (Yes/No) |
-| `story_headlines.csv` | 4 | one story point per row | `story_point, title, headline, source_numbers` (the computed numbers behind the headline), `source_file` |
+| `overview_kpis.csv` | 4 | company headline tiles | accuracy, baseline improvement, 1-week-ahead coverage, stores beating baseline |
+| `kpi_strip.csv` | 70 | Level x State x Store x Weeks ahead (All, 1, 2, 3, 4) | filterable KPI strip: actual/forecast $, variance $/%, accuracy, baseline improvement, 80% coverage; Desc* columns <= 45 chars |
+| `accuracy_by_area.csv` | 14 | company, 3 states, 10 stores | accuracy, last-year accuracy, revenue variance $, rank within level, Strongest/Weakest label |
+| `forecast_plain.csv` | 336 | area x week (24 weeks) | weekly actual/forecast, variance $/%, Direction, Abs error rank, Top 3 largest miss, likely range |
+| `business_impact.csv` | 5 | company totals | total/average/largest absolute miss vs last year's pattern |
+| `forecast_context.csv` | 7 | periods | history, burn-in, validation, test window, origins x horizons, no future forecast |
+| `methodology_notes.csv` | 8 | Topic, Plain explanation | definitions and technical notes for a Methodology text panel |
+| `action_panel.csv` | 3 | Insight / Action / Watch | actions tied to weakest stores and largest miss week |
+| `story_headlines.csv` | 4 | story points | computed headlines for the 4-point story |
 
-Filtering: each area has exactly one row per week (the 6 origins x 4 weeks ahead tile the 24 test weeks), so Week, State and Store filters never double count.
-To show state totals use `Level = State`; to show stores within a state use `Level = Store` and filter `State`. Do not sum across Levels.
-There are no forecasts beyond the last tested week (2016-05-14): "Next 4 weeks outlook" describes the latest tested 4-week block, not the future.
+Filtering: each area has one row per week in `forecast_plain.csv`, so Week / State / Store filters never double count.
+In `kpi_strip.csv` use one Level at a time; set Weeks ahead = All for the full 24 forecasts, or 1 to 4 for one horizon.
+Do not sum across Levels. There is no forecast beyond 2016-05-14.

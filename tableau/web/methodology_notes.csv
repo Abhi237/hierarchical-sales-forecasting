@@ -1,0 +1,9 @@
+Topic,Plain explanation
+Forecast accuracy,Accuracy (%) = 100 minus the share of actual revenue missed. Share missed = sum of absolute forecast errors divided by sum of actual revenue (WAPE in the evaluation code). Higher is better.
+Baseline improvement,Baseline improvement (%) = 100 x (1 - our miss share / last year's miss share). Last year's pattern repeats the same calendar week from 52 weeks earlier (seasonal naive). 81.0% at company means our absolute errors are 81.0% smaller than that baseline.
+Likely range and coverage,"The likely range is the 80% prediction interval (10th to 90th percentile of the forecast distribution). 'Weeks inside the likely range' counts how many of the tested week-ahead forecasts had actual revenue between the low and high of that band. At company, 1 week ahead: 4 of 6. Across all 1 to 4 weeks ahead: 17 of 24. A 80% band that is well calibrated would land near 80% coverage."
+Revenue definition,Weekly revenue = units sold x the week's sell price for each item in each store (M5 sell_prices). Prices are stored to the cent; children sum to parents to the cent in the SQL model.
+Forecast method,"Each series is forecast with an ARIMA model (R fable). Store, state and company forecasts are then reconciled with MinT shrinkage so they add up. The Overview uses that reconciled forecast."
+Benchmark,Last year's pattern (seasonal naive): forecast = actual revenue from the same week 52 weeks earlier. A 4-week moving average and other models are on the Methodology tab.
+Hierarchy check,"On the Overview forecast, store forecasts sum to their state and state forecasts sum to the company within 0.02 dollars at most across every tested week (rounding). Actuals sum exactly."
+What this is not,This is a backtest on 2015-12-05 to 2016-05-14. There is no forecast of weeks after the last data week. Action recommendations for buffers use a chosen accuracy cut-off of 95% and are labelled as such.

@@ -1,0 +1,4 @@
+order,kind,text
+1,Insight,Company accuracy is 97.3% and beats last year's pattern at every state and store. Use the company and state forecasts for planning.
+2,Action,"Hold a wider buffer at CA_2 (93.5%) and WI_2 (94.0%), the 2 stores below the chosen 95% accuracy cut-off, and review them weekly."
+3,Watch,"Largest company miss: week of 2016-04-30, 2 week(s) ahead, $60.8k absolute miss (under-forecast). Filter the weekly chart to Top 3 largest miss = Yes to inspect the other large misses."

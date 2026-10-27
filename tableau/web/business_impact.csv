@@ -1,0 +1,6 @@
+order,metric,value_display,value_usd,caption
+1,Total absolute miss,$578.3k,"$578,334.28",Sum of |forecast - actual| over 24 company week-ahead forecasts in the test window.
+2,Average weekly miss,$24.1k,"$24,097.26",Mean absolute miss per company week-ahead forecast.
+3,Largest single-week miss,$60.8k,"$60,846.17","Week of 2016-04-30, 2 week(s) ahead; under-forecast."
+4,Last year's pattern absolute miss,$3.04m,"$3,037,925.33","Same company weeks, repeating last year's sales for the same week."
+5,Absolute miss avoided vs last year,$2.46m,"$2,459,591.05",81.0% less absolute miss than last year's pattern.

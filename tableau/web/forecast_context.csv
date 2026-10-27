@@ -1,0 +1,8 @@
+order,topic,value,detail
+1,Observed history,2011-01-29 to 2015-11-28,253 complete weeks of M5 weekly revenue (company to store).
+2,Training at each origin,Weeks 1 through the origin week,At every origin the models train only on weeks up to that origin; no future leaks.
+3,Burn-in origins,2014-11-08 to 2015-06-13,8 origins used only for training and interval calibration.
+4,Validation origins,2015-06-20 to 2015-11-28,6 origins used for model selection; not the final score.
+5,Test (backtest) window,2015-12-05 to 2016-05-14,24 target weeks from 6 origins x 4 weeks ahead. All Overview numbers use this window.
+6,Origins x horizons,6 origins x 4 weeks ahead = 24 forecasts per area,"Each origin trains through the origin week, then forecasts the next 4 weeks."
+7,Future forecast,Not available,No genuinely future forecast exists. The latest week in the data is 2016-05-14; every figure is a backtest.

@@ -1,15 +1,15 @@
-level_order,Level,State,Store,Accuracy (%),Last year's pattern accuracy (%)
-1,Company,All states,All stores,97.3,86.0
-2,State,California,All stores,97.4,84.6
-2,State,Texas,All stores,96.6,91.5
-2,State,Wisconsin,All stores,96.0,82.7
-3,Store,California,CA_1,97.5,94.3
-3,Store,California,CA_2,93.5,57.3
-3,Store,California,CA_3,97.3,93.7
-3,Store,California,CA_4,95.9,90.4
-3,Store,Texas,TX_1,96.5,94.9
-3,Store,Texas,TX_2,96.1,89.6
-3,Store,Texas,TX_3,96.2,90.4
-3,Store,Wisconsin,WI_1,97.2,90.4
-3,Store,Wisconsin,WI_2,94.0,78.0
-3,Store,Wisconsin,WI_3,95.7,80.9
+level_order,Level,State,Store,Accuracy (%),Last year's pattern accuracy (%),Actual revenue ($),Forecast revenue ($),Revenue variance ($),Revenue variance (%),Variance direction,Abs error ($),Rank (within level),Strength label
+1,Company,All states,All stores,97.3,86.0,21639066.11,21243030.87,-396035.24,-1.83,Under-forecast,578334.28,1,Company total
+2,State,California,All stores,97.4,84.6,9452404.37,9301558.98,-150845.39,-1.6,Under-forecast,248360.29,1,Strongest
+2,State,Texas,All stores,96.6,91.5,6001148.08,5924441.35,-76706.73,-1.28,Under-forecast,202175.97,2,-
+2,State,Wisconsin,All stores,96.0,82.7,6185513.66,6017030.57,-168483.09,-2.72,Under-forecast,247470.75,3,Weakest
+3,Store,California,CA_1,97.5,94.3,2391717.65,2378713.02,-13004.63,-0.54,Under-forecast,59846.89,1,Strongest
+3,Store,California,CA_3,97.3,93.7,3335969.84,3324670.03,-11299.81,-0.34,Under-forecast,90479.67,2,-
+3,Store,Wisconsin,WI_1,97.2,90.4,1910175.74,1877484.49,-32691.25,-1.71,Under-forecast,53813.61,3,-
+3,Store,Texas,TX_1,96.5,94.9,1694479.05,1671408.57,-23070.48,-1.36,Under-forecast,59742.7,4,-
+3,Store,Texas,TX_3,96.2,90.4,2160825.94,2144300.75,-16525.19,-0.76,Under-forecast,81391.57,5,-
+3,Store,Texas,TX_2,96.1,89.6,2145843.09,2108732.01,-37111.08,-1.73,Under-forecast,84167.92,6,-
+3,Store,California,CA_4,95.9,90.4,1381123.49,1360321.22,-20802.27,-1.51,Under-forecast,56178.39,7,-
+3,Store,Wisconsin,WI_3,95.7,80.9,1812637.01,1754608.38,-58028.63,-3.2,Under-forecast,77854.69,8,-
+3,Store,Wisconsin,WI_2,94.0,78.0,2462700.91,2384937.72,-77763.19,-3.16,Under-forecast,148709.45,9,-
+3,Store,California,CA_2,93.5,57.3,2343593.39,2237854.7,-105738.69,-4.51,Under-forecast,152052.93,10,Weakest

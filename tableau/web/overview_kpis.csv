@@ -1,5 +1,5 @@
 order,label,value_display,caption
-1,Forecast accuracy at company level,97.3%,"Our company-wide forecast missed actual weekly revenue by 2.7% on average, looking up to 4 weeks ahead."
-2,More accurate than last year's pattern,81.0%,Our company-wide forecast errors are 81.0% smaller than simply repeating last year's sales.
-3,Weeks actual revenue landed in the likely range,4 of 6,"Company-wide, one week ahead: weeks where actual revenue fell inside our likely range (80% band)."
-4,Stores where our forecast beats last year's pattern,10 of 10,Stores where our forecast was more accurate than repeating last year's sales.
+1,Forecast accuracy at company level,97.3%,"Company forecast missed weekly revenue by 2.7% on average, looking 1 to 4 weeks ahead."
+2,More accurate than last year's pattern,81.0%,Company forecast errors are 81.0% smaller than repeating last year's sales.
+3,Weeks inside the likely range (1 week ahead),4 of 6,"Company, 1 week ahead only: weeks inside the 80% likely range (17 of 24 across all 1 to 4 weeks ahead)."
+4,Stores beating last year's pattern,10 of 10,Stores where our forecast was more accurate than repeating last year's sales.

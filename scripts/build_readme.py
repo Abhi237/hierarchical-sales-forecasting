@@ -197,10 +197,11 @@ pipeline or its numbers change, the text boxes must be updated by hand. The full
 ### Plain-language Overview (for non-technical analysts)
 
 The dashboard redesign adds an Overview tab in business language, fed by three CSVs that `scripts/build_tableau_overview.py` derives from the
-existing `tableau/web` exports (no new modelling): `overview_kpis.csv` (4 headline numbers with one-line captions), `accuracy_by_area.csv` (accuracy =
-100 minus WAPE for the company, each state and each store, default model vs seasonal naive), `forecast_plain.csv` (weekly forecast vs actual with the
-likely range for the company, 3 states and 10 stores, 1 to 4 weeks ahead, with separate State and Store columns) and `story_headlines.csv` (one computed
-headline per story point). Inputs are `tableau/web` and `tableau/data/forecast_vs_actual.csv`. The default model is R fable ARIMA reconciled with MinT shrink. The technical charts move to a Methodology tab.
+existing `tableau/web` exports (no new modelling): `overview_kpis.csv` (4 headline numbers with one-line captions), `kpi_strip.csv` (filterable actual/forecast $, variance, accuracy, baseline improvement, 80% coverage by Level/State/Store and Weeks ahead),
+`accuracy_by_area.csv` (accuracy, revenue variance, rank and Strongest/Weakest by company/state/store), `forecast_plain.csv` (weekly actual/forecast
+with variance, Direction, top-3 miss flags and the likely range), `business_impact.csv`, `forecast_context.csv`, `methodology_notes.csv`,
+`action_panel.csv` and `story_headlines.csv`. Inputs are `tableau/data/forecast_vs_actual.csv` (and calendar/origins). Accuracy = 100 minus WAPE
+from `src/hier_forecast/metrics.py`. Default forecast = R fable ARIMA MinT shrink; baseline = last year's pattern (seasonal naive). The technical charts move to a Methodology tab.
 
 ### Plain glossary
 
